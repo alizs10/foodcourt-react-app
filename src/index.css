@@ -6,10 +6,23 @@
 
 @layer base {
     html {
-      font-family: Post;
+      font-family: Estedad;
     }
   }
 
 html {
     direction: rtl;
+}
+
+body {
+  background-color: #FAF8F0;
+  overflow: hidden;
+}
+
+.flex-center {
+  @apply flex justify-center items-center
+}
+
+.noscrollbar::-webkit-scrollbar {
+  display: none;
 }

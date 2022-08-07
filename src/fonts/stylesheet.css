@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Post';
-    src: url('Post-Regular.eot');
-    src: url('Post-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Post-Regular.woff2') format('woff2'),
-        url('Post-Regular.woff') format('woff'),
-        url('Post-Regular.ttf') format('truetype');
+    font-family: 'Estedad';
+    src: url('Estedad-Regular.eot');
+    src: url('Estedad-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Estedad-Regular.woff2') format('woff2'),
+        url('Estedad-Regular.woff') format('woff'),
+        url('Estedad-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
