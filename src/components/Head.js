@@ -65,10 +65,10 @@ function Head() {
             <div className='flex flex-col gap-4 bg-[#DDE5B6] py-2'>
                 <div
                     className="mt-2 mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit">
-                    <img className='w-12' src='./assets/pizza-logo.png' />
+                    <img className='w-10' src='./assets/limon-logo.png' />
                     <span
                         className='text-[#90A84D] font-bold'>
-                        فود کورت
+                        فود کورت لیمو
                     </span>
                 </div>
             </div>
