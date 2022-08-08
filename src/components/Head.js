@@ -59,24 +59,28 @@ function Head() {
     }, [])
 
     return (
-        <div className='fixed top-0 left-0 right-0 shadow-lg flex flex-col gap-4 h-fit bg-[#DDE5B6] py-2'>
-            <AnimatePresence>
-                {!isScrollingDown && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }} className="mt-2 mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit">
-                        <img className='w-12' src='./assets/pizza-logo.png' />
-                        <span className='text-[#90A84D] font-bold'>
-                            فود کورت
-                        </span>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+        <motion.div
+            animate={isScrollingDown ? { top: "-100px" } : { top: "0" }}
+            className="fixed top-0 left-0 right-0 shadow-lg bg-[#DDE5B6]">
+            <div className='flex flex-col gap-4 bg-[#DDE5B6] py-2'>
+                <div
+                    className="mt-2 mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit">
+                    <img className='w-12' src='./assets/pizza-logo.png' />
+                    <span
+                        className='text-[#90A84D] font-bold'>
+                        فود کورت
+                    </span>
+                </div>
+            </div>
+
+
             <FoodCategoriesSideButtons isScrollable={isScrollable} handleScrollRight={handleScrollRight} handleScrollLeft={handleScrollLeft}>
                 <FoodCategories foodCategoriesRef={foodCategoriesRef} />
             </FoodCategoriesSideButtons>
-        </div>
+
+        </motion.div>
+
+
     )
 }
 
