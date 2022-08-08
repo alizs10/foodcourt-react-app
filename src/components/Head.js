@@ -3,38 +3,29 @@ import React, { useEffect, useRef, useState } from 'react'
 import FoodCategories from './HeadContents/FoodCategories';
 import FoodCategoriesSideButtons from './HeadContents/FoodCategoriesSideButtons';
 
+import { motion, AnimatePresence } from "framer-motion"
+
 function Head() {
 
-    const [scrollDir, setScrollDir] = useState("scrolling down");
+    let oldScrollY = 0;
+    const [isScrollingDown, setIsScrollingDown] = useState(false)
 
     useEffect(() => {
-        const threshold = 0;
-        let lastScrollY = window.pageYOffset;
-        let ticking = false;
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-        const updateScrollDir = () => {
-            const scrollY = window.pageYOffset;
+    const handleScroll = () => {
 
-            if (Math.abs(scrollY - lastScrollY) < threshold) {
-                ticking = false;
-                return;
-            }
-            setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
-            lastScrollY = scrollY > 0 ? scrollY : 0;
-            ticking = false;
-        };
+        if (window.scrollY > oldScrollY) {
+            setIsScrollingDown(true);
+        } else {
+            setIsScrollingDown(false);
+        }
 
-        const onScroll = () => {
-            if (!ticking) {
-                window.requestAnimationFrame(updateScrollDir);
-                ticking = true;
-            }
-        };
+        oldScrollY = window.scrollY;
+    }
 
-        window.addEventListener("scroll", onScroll);
-
-        return () => window.removeEventListener("scroll", onScroll);
-    }, [scrollDir]);
 
     const [isScrollable, setIsScrollable] = useState(false)
 
@@ -68,15 +59,20 @@ function Head() {
     }, [])
 
     return (
-        <div className='sticky top-0 shadow-lg flex flex-col gap-4 h-fit bg-[#DDE5B6] py-4'>
-            
-            <div className={`${scrollDir === "scrolling down" ? "hidden" : ""} mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit`}>
-                <img className='w-12' src='./assets/pizza-logo.png' />
-                <span className='text-[#90A84D] font-bold'>
-                    فوت کورت
-                </span>
-            </div>
-
+        <div className='fixed top-0 left-0 right-0 shadow-lg flex flex-col gap-4 h-fit bg-[#DDE5B6] py-2'>
+            <AnimatePresence>
+                {!isScrollingDown && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }} className="mt-2 mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit">
+                        <img className='w-12' src='./assets/pizza-logo.png' />
+                        <span className='text-[#90A84D] font-bold'>
+                            فود کورت
+                        </span>
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <FoodCategoriesSideButtons isScrollable={isScrollable} handleScrollRight={handleScrollRight} handleScrollLeft={handleScrollLeft}>
                 <FoodCategories foodCategoriesRef={foodCategoriesRef} />
             </FoodCategoriesSideButtons>

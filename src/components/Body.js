@@ -26,7 +26,7 @@ function Body() {
 
 
   return (
-    <div className='mx-auto w-4/5 flex flex-col gap-y-3'>
+    <div className='mt-64 mx-auto w-4/5 flex flex-col gap-y-3'>
 
       <FoodsContainer title="فست فود ها" foods={foods} />
       <FoodsContainer title="فست فود ها" foods={foods} />
