@@ -2,7 +2,7 @@ import React from 'react'
 
 function Food({food}) {
   return (
-    <div className="col-span-1 bg-[#E6DBB3] p-3 rounded-lg flex items-start gap-x-2">
+    <div className="col-span-1 cursor-pointer bg-[#E6DBB3]/60 p-3 rounded-lg flex items-start gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80">
         <img className='w-1/4 rounded-lg' src={food.img}/>
         <div className='flex flex-col gap-y-2'>
             <span>{food.name}</span>
