@@ -61,7 +61,7 @@ function Head() {
     return (
         <motion.div
             animate={isScrollingDown ? { top: "-100px" } : { top: "0" }}
-            className="fixed top-0 left-0 right-0 shadow-lg bg-[#DDE5B6]">
+            className="fixed top-0 left-0 right-0 z-10 shadow-lg bg-[#DDE5B6]">
             <div className='flex flex-col gap-4 bg-[#DDE5B6] py-2'>
                 <div
                     className="mt-2 mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit">

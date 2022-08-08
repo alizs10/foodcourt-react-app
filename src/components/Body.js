@@ -6,21 +6,24 @@ function Body() {
   const foods = [
     {
       name: "پیتزا پپرونی",
-      price: "120,000T",
-      ingredients: ["نان", "پنیر پیزا", "گوجه"],
-      img: "./assets/pizza-logo.png"
+      price: "120000",
+      ingredients: "گوجه، پنیر پیترا، نان",
+      img: "./assets/pizza-logo.png",
+      isAvailable: true
     },
     {
       name: "پیتزا خوب",
-      price: "220,000T",
-      ingredients: ["نان", "پنیر پیزا", "گوجه"],
-      img: "./assets/pizza-logo.png"
+      price: "220000",
+      ingredients: "گوجه، پنیر پیترا، نان",
+      img: "./assets/pizza-logo.png",
+      isAvailable: false
     },
     {
       name: "پیتزا بد",
-      price: "80,000T",
-      ingredients: ["نان", "پنیر پیزا", "گوجه"],
-      img: "./assets/pizza-logo.png"
+      price: "80000",
+      ingredients: "گوجه، پنیر پیترا، نان",
+      img: "./assets/pizza-logo.png",
+      isAvailable: true
     },
   ];
 
