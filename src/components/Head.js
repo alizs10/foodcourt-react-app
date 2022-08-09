@@ -10,6 +10,8 @@ function Head() {
     let oldScrollY = 0;
     const [isScrollingDown, setIsScrollingDown] = useState(false)
 
+    const logoRef = useRef(null)
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -64,14 +66,14 @@ function Head() {
 
     return (
         <motion.div
-            animate={isScrollingDown ? { top: "-100px" } : { top: "0" }}
+            animate={isScrollingDown ? { top: `-${logoRef.current.clientHeight}px` } : { top: "0" }}
             className="fixed top-0 left-0 right-0 z-10 shadow-lg bg-[#DDE5B6]">
-            <div className='flex flex-col gap-4 bg-[#DDE5B6] py-2'>
+            <div ref={logoRef} className='flex flex-col gap-4 bg-[#DDE5B6] py-2'>
                 <div
                     className="mt-2 mx-auto flex items-center py-2 px-4 rounded-full bg-white gap-2 text-2xl w-fit">
-                    <img className='w-10' src='./assets/limon-logo.png' />
+                    <img className='w-5 md:w-8' src='./assets/limon-logo.png' />
                     <span
-                        className='text-[#90A84D] font-bold'>
+                        className='text-[#90A84D] font-bold text-sm md:text-xl'>
                         فود کورت لیمو
                     </span>
                 </div>

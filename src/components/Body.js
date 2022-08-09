@@ -41,7 +41,7 @@ function Body() {
       food,
       setFood
     }}>
-      <div className='mt-64 mx-auto w-4/5 flex flex-col gap-y-3'>
+      <div className='mt-44 md:mt-64 mx-auto w-4/5 flex flex-col gap-y-2 md:gap-y-3'>
 
         <FoodsContainer title="فست فود ها" foods={foods} />
         <FoodsContainer title="فست فود ها" foods={foods} />

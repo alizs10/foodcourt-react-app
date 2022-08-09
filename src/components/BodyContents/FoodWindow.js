@@ -11,7 +11,7 @@ function FoodWindow({ food }) {
   return (
     <div
     onClick={e => e.stopPropagation()}
-    className="absolute z-50 flex flex-col gap-y-4 top-0 bottom-0 left-1/3 p-3 w-1/3 bg-[#DDE5B6] shadow-md">
+    className="absolute z-50 flex flex-col gap-y-4 top-0 bottom-0 left-0 md:left-1/3 p-3 w-full md:w-1/3 bg-[#DDE5B6] shadow-md">
       <img className='w-5/6 self-center' src={food.img} />
 
       <span className="font-bold text-xl">{food.name}</span>

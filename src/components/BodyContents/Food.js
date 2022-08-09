@@ -20,12 +20,12 @@ function Food({ food }) {
     <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 md:col-span-1 grid grid-cols-5 cursor-pointer bg-[#E6DBB3]/60 p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
       <img className='col-span-2 rounded-lg' src={food.img} />
       <div className='col-span-3 flex flex-col gap-y-2'>
-        <span className='text-lg font-bold'>{food.name}</span>
-        <span className='mt-4'>محتویات: {food.ingredients}</span>
+        <span className='text-base md:text-lg font-bold'>{food.name}</span>
+        <span className='mt-4 text-xs md:text-sm'>محتویات: {food.ingredients}</span>
         {food.isAvailable ? (
 
           <>
-            <span>{showPersianPrice(food.price)} <span className='text-[12px] text-[#6c757d] inline-block -rotate-90'>تومان</span></span>
+            <span className="text-sm md:text-base">{showPersianPrice(food.price)} <span className='text-[10px] pl-1 md:text-[12px] text-[#6c757d] inline-block -rotate-90'>تومان</span></span>
             <AnimatePresence>
               {inOrderList ? (
                 <FoodCounter toggle={setInOrderList} />
@@ -46,8 +46,8 @@ function Food({ food }) {
           </>
         ) : (
 
-          <div className='flex justify-end'>
-            <button className='px-6 ml-5 -rotate-12 mt-10 font-bold py-1 border-4 border-black'>تمام شد</button>
+          <div className='flex justify-end mb-4'>
+            <button className='px-3 md:px-6 ml-2 md:ml-5 -rotate-12 mt-5 md:mt-10 text-xs md:text-base font-bold py-1 border-2 md:border-4 border-black'>تمام شد</button>
           </div>
 
         )}
