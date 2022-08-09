@@ -4,7 +4,6 @@ export const priceFormatter = price => {
 
 
 export const e2pNumbers = number => {
-    ;
     let persianNumbers = ['۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', '۰']
     let englishNumbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
     for (let i = 0; i < englishNumbers.length; i++) {
