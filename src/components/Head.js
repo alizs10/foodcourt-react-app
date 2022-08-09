@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import FoodCategories from './HeadContents/FoodCategories';
 import FoodCategoriesSideButtons from './HeadContents/FoodCategoriesSideButtons';
 
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 
 function Head() {
 
