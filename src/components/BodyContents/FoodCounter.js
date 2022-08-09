@@ -26,10 +26,11 @@ function FoodCounter({ toggle }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        onClick={e => e.stopPropagation()}
         className="select-none flex justify-end mt-5 ml-2 gap-x-2 items-center text-[#5e6472]">
-            <span onClick={() => handleIncreaseQuantity()} className="fa fa-plus p-2"></span>
+            <span onClick={() => handleIncreaseQuantity()} className="cursor-pointer fa fa-plus p-2"></span>
             <span className="font-bold w-10 text-center">{e2pNumbers(quantity.toString())}</span>
-            <span onClick={() => handleDecreaseQuantity()} className="fa fa-trash p-2"></span>
+            <span onClick={() => handleDecreaseQuantity()} className="cursor-pointer fa fa-trash p-2"></span>
         </motion.div>
     )
 }
