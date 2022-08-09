@@ -17,13 +17,17 @@ function Head() {
 
     const handleScroll = () => {
 
-        if (window.scrollY > oldScrollY) {
+        if (window.scrollY - oldScrollY > 50) {
             setIsScrollingDown(true);
-        } else {
+        } 
+        
+        if ((oldScrollY - window.scrollY > 50)){
             setIsScrollingDown(false);
         }
 
-        oldScrollY = window.scrollY;
+        if (Math.abs(window.scrollY - oldScrollY) > 50) {
+            oldScrollY = window.scrollY;
+        }
     }
 
 
