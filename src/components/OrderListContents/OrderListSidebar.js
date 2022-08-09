@@ -9,7 +9,7 @@ function OrderListSidebar({ toggler }) {
     console.log(toggler);
 
     return (
-        <motion.div
+        <motion.div onClick={e => e.stopPropagation()}
             initial={{ left: "-30%" }}
             animate={{ left: 0 }}
             exit={{ left: "-30%" }}
