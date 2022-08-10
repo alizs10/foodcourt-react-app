@@ -63,7 +63,7 @@ function FoodWindow({ food, toggle }) {
       onClick={e => e.stopPropagation()}
       className="cursor-grab overflow-hidden absolute z-50 grid grid-rows-3 top-0 bottom-0 left-0 md:left-1/3 w-full md:w-1/3 bg-[#DDE5B6] shadow-md">
       <div className="row-span-2 select-none">
-        <img ref={foodImg} className='w-full pointer-events-none transition-all' src={food.img} />
+        <img ref={foodImg} className='w-full h-full object-cover pointer-events-none transition-all' src={food.img} />
       </div>
 
       <div className='row-span-1 bg-white'>
