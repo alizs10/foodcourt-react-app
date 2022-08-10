@@ -8,7 +8,6 @@ function FoodCategory({ name, img, selected, foodCategoriesRef }) {
   useEffect(() => {
 
     if (selected === "true") {
-      console.log(foodCatRef);
       let position = foodCatRef.current.offsetLeft;
       let elementWidth = foodCatRef.current.clientWidth;
       let movement = position - elementWidth;

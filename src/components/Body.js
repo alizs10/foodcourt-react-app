@@ -48,7 +48,7 @@ function Body() {
         <FoodsContainer title="فست فود ها" foods={foods} />
 
         <BackDrop toggler={foodWindowVisibility} handleClick={() => setFoodWindowVisibility(false)}>
-          <FoodWindow food={food} />
+          <FoodWindow food={food} toggle={setFoodWindowVisibility} />
         </BackDrop>
       </div>
     </FoodContext.Provider>
