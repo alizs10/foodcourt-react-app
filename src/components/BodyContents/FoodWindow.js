@@ -67,7 +67,7 @@ function FoodWindow({ food, toggle }) {
       </div>
 
       <div className='row-span-1 bg-white'>
-        <div ref={foodDetailsContainerRef} onPointerDown={e => handlePointerDown(e)} className="absolute select-none flex flex-col gap-y-2 bottom-0 h-fit left-0 w-full rounded-t-3xl p-3 bg-white">
+        <div ref={foodDetailsContainerRef} onPointerDown={e => handlePointerDown(e)} className="absolute select-none touch-none flex flex-col gap-y-2 bottom-0 h-fit left-0 w-full rounded-t-3xl p-3 bg-white">
 
           <span className="w-1/5 h-1 bg-black/40 rounded-full self-center"></span>
           <span className="font-bold text-xl">{food.name}</span>
