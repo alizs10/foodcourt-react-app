@@ -1,16 +1,18 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import { motion } from "framer-motion"
 import OrderListContext from '../../context/OrderListContext'
-import { e2pNumbers, showPersianPrice } from '../../Helper/helpers'
+import { calculateOrderList, e2pNumbers, showPersianPrice } from '../../Helper/helpers'
 
 function OrderListSidebar() {
 
     const { items } = useContext(OrderListContext)
 
+    const [payPrice, setPayPrice] = useState(0);
+
     useEffect(() => {
 
-        console.log('calculate items');
+        setPayPrice(calculateOrderList(items))
 
     }, [items])
 
@@ -38,7 +40,7 @@ function OrderListSidebar() {
             <div className='absolute bottom-8 left-0 right-0'>
                 <span className='flex justify-between font-bold text-sm md:text-base'>
                     <span className='mr-4 md:mr-8'>جمع سفارش شما:</span>
-                    <span className='ml-4 md:ml-8'>۵۵۶,۰۰۰ <span className="inline-block pl-1 text-[10px] -rotate-90">تومان</span></span>
+                    <span className='ml-4 md:ml-8'>{showPersianPrice(payPrice)} <span className="inline-block pl-1 text-[10px] -rotate-90">تومان</span></span>
                 </span>
             </div>
 

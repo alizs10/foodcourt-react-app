@@ -33,6 +33,17 @@ export const isInList = (foodId, CatId, items) => {
     return res;
 }
 
+export const calculateOrderList = items => {
+
+    let payPrice = 0;
+
+    items.map(item => {
+        payPrice += (item.food.price * item.count)
+    })
+
+    return payPrice;
+}
+
 
 export const generateId = () => {
     return Math.floor(Math.random() * 1000000).toString();
