@@ -16,20 +16,33 @@ function FoodCounter({ toggle, inOrderList }) {
 
 
     useEffect(() => {
-        if(item)
-        {
+        if (item) {
             setQuantity(item.count)
         }
     }, [item])
 
     const handleIncreaseQuantity = () => {
         setQuantity(quantity + 1);
+
+        let id = item.id;
+        let index = items.findIndex(item => item.id == id)
+        let matchedItem = items[index]
+        matchedItem.count += 1;
     }
 
     const handleDecreaseQuantity = () => {
-        if (quantity >= 2) {
+
+        let id = item.id;
+        let index = items.findIndex(item => item.id == id)
+        let matchedItem = items[index]
+
+        if (matchedItem.count >= 2) {
             setQuantity(quantity - 1);
+            matchedItem.count -= 1;
+
         } else {
+            let filteredItems = items.filter(item => item.id != matchedItem.id)
+            setItems(filteredItems)
             setQuantity(1);
             toggle(false)
         }
