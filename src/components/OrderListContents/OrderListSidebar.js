@@ -6,7 +6,7 @@ import { calculateOrderList, e2pNumbers, showPersianPrice } from '../../Helper/h
 
 function OrderListSidebar() {
 
-    const { items } = useContext(OrderListContext)
+    const { items, setItems } = useContext(OrderListContext)
 
     const [payPrice, setPayPrice] = useState(0);
 
@@ -16,6 +16,11 @@ function OrderListSidebar() {
 
     }, [items])
 
+    const handleRemoveAllItems = () => {
+        setItems([])
+    }
+
+
     return (
         <motion.div onClick={e => e.stopPropagation()}
             initial={{ left: "-30%" }}
@@ -23,9 +28,11 @@ function OrderListSidebar() {
             exit={{ left: "-30%" }}
             className={`fixed z-50 flex flex-col gap-y-4 shadow-md top-0 bottom-0 bg-white text-[#5e6472] w-3/4 md:w-1/2 lg:w-1/3`}>
 
-            <span className='mt-8 mx-8 flex justify-between items-center'>
+            <span className={`mt-8 mx-8 flex ${items.length > 0 ? 'justify-between' : 'justify-center'} items-center`}>
                 <span className='text-center font-bold text-sm md:text-base'>لیست سفارش شما ({`${e2pNumbers(items.length.toString())}`})</span>
-                <span className='fa fa-trash-list text-lg p-2 cursor-pointer'></span>
+                {items.length > 0 && (
+                    <span onClick={handleRemoveAllItems} className='fa fa-trash-list text-lg p-2 cursor-pointer'></span>
+                )}
             </span>
 
             <div className='mt-6 flex flex-col gap-y-4'>
@@ -46,7 +53,7 @@ function OrderListSidebar() {
                     <span className='ml-4 md:ml-8'>{showPersianPrice(payPrice)} <span className="inline-block pl-1 text-[10px] -rotate-90">تومان</span></span>
                 </span>
                 <span className="text-[14px] text-center block mt-4">
-                    لطفا لیست سفارش خود را به
+                    لطفا لیست سفارش خود را به رستوران اعلام کنید
                 </span>
             </div>
 

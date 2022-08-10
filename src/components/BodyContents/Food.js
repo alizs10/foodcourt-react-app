@@ -21,9 +21,12 @@ function Food({ food, catId }) {
       console.log(res);
       setInOrderList(res)
       setCount(res.count.toString())
+    } else {
+      setInOrderList(res)
+      setCount(1)
     }
 
-  }, [])
+  }, [items])
 
   const handleShowFoodWindow = () => {
     setFood(food)
