@@ -28,7 +28,7 @@ function OrderListSidebar() {
 
                     items.map((item, index) => (
                         <span className='flex justify-between border-b text-xs ms:text-sm'>
-                            <span className='mr-4 md:mr-8'>{`${e2pNumbers(index.toString())}- ${item.food.name}`}</span>
+                            <span className='mr-4 md:mr-8'>{`${e2pNumbers((index + 1).toString())}- ${item.food.name} (${e2pNumbers(item.count.toString())})`}</span>
                             <span className='ml-4 md:ml-8'>{`${showPersianPrice(item.food.price)}`} <span className="inline-block mb-1 text-[10px] -rotate-90">تومان</span></span>
                         </span>
                     ))

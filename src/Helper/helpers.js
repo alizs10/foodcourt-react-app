@@ -18,3 +18,24 @@ export const e2pNumbers = number => {
 export const showPersianPrice = price => {
     return e2pNumbers(priceFormatter(price))
 }
+
+
+export const isInList = (foodId, CatId, items) => {
+    let res = false;
+
+    items.forEach(item => {
+        itemChecker: if (item.food.id == foodId && item.catId == CatId) {
+            res = item;
+            break itemChecker;
+        }
+    });
+
+    return res;
+}
+
+
+export const generateId = () => {
+    return Math.floor(Math.random() * 1000000).toString();
+}
+
+

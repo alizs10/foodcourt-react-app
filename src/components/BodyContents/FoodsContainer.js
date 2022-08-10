@@ -43,7 +43,7 @@ function FoodsContainer({ title, foods, catId }) {
 
             <div className="grid grid-cols-2 gap-2">
                 {foods.map(food => (
-                    <Food food={food} key={food.id} />
+                    <Food food={food} catId={catId} key={food.id} />
                 ))}
             </div>
 
