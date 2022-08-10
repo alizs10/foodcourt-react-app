@@ -18,7 +18,10 @@ function Food({ food }) {
 
   return (
     <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 md:col-span-1 grid grid-cols-5 cursor-pointer bg-[#E6DBB3]/60 p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
-      <img className='col-span-2 rounded-lg' src={food.img} />
+      <div className="col-span-2 text-center">
+        <img className='w-full h-44 object-cover rounded-lg' src={food.img} />
+
+      </div>
       <div className='col-span-3 flex flex-col gap-y-2'>
         <span className='text-base md:text-lg font-bold'>{food.name}</span>
         <span className='mt-4 text-xs md:text-sm'>محتویات: {food.ingredients}</span>

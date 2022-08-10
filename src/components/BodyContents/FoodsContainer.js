@@ -20,7 +20,7 @@ function FoodsContainer({ title, foods }) {
 
             <div className="grid grid-cols-2 gap-2">
                 {foods.map(food => (
-                    <Food food={food} />
+                    <Food food={food} key={food.id} />
                 ))}
             </div>
 
