@@ -5,6 +5,8 @@ const FoodContext = React.createContext({
     setFoodWindowVisibility: () => {},
     food: {},
     setFood: () => {},
+    selectedCategory: "",
+    setSelectedCategory: () => {}
 })
 
 

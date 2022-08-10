@@ -17,13 +17,13 @@ function Food({ food }) {
   }
 
   return (
-    <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 md:col-span-1 grid grid-cols-5 cursor-pointer bg-[#E6DBB3]/60 p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
+    <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 md:col-span-1 grid grid-cols-5 cursor-pointer bg-[#E6DBB3]/60 p-1 md:p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
       <div className="col-span-2 text-center">
-        <img className='w-full h-44 object-cover rounded-lg' src={food.img} />
+        <img className='w-full h-36 md:h-44 object-cover rounded-lg' src={food.img} />
 
       </div>
       <div className='col-span-3 flex flex-col gap-y-2'>
-        <span className='text-base md:text-lg font-bold'>{food.name}</span>
+        <span className='text-sm md:text-lg font-bold'>{food.name}</span>
         <span className='mt-4 text-xs md:text-sm'>محتویات: {food.ingredients}</span>
         {food.isAvailable ? (
 
@@ -42,7 +42,7 @@ function Food({ food }) {
                   <button onClick={e => {
                     e.stopPropagation()
                     setInOrderList(true)
-                  }} className='select-none px-2 ml-2 mt-5 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
+                  }} className='select-none px-2 ml-2 md:mt-5 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
                 </motion.div>
               )}
             </AnimatePresence>
