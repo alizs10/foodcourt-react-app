@@ -1,14 +1,31 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import React, { useRef, useState } from 'react'
-import { showPersianPrice } from '../../Helper/helpers'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import OrderListContext from '../../context/OrderListContext'
+import { isInList, showPersianPrice } from '../../Helper/helpers'
 import FoodCounter from './FoodCounter'
 
 function FoodWindow({ food, toggle }) {
 
-  const [inOrderList, setInOrderList] = useState(true);
+  const { items } = useContext(OrderListContext)
+  const [inOrderList, setInOrderList] = useState(false);
 
   const foodDetailsContainerRef = useRef(null);
   const foodImg = useRef(null);
+
+  useEffect(() => {
+
+    let res = isInList(food.id, food.catId, items);
+    if (res) {
+
+      setInOrderList(res)
+
+    } else {
+      setInOrderList(res)
+
+    }
+
+  }, [items])
+
 
   const handlePointerDown = (e) => {
 
@@ -46,9 +63,9 @@ function FoodWindow({ food, toggle }) {
 
 
     if (foodDetailsContainerRef.current.clientHeight > (window.innerHeight - positionY)) {
-      let disapearingAmout = ((window.innerHeight - foodDetailsContainerRef.current.offsetTop)/foodDetailsContainerRef.current.clientHeight);
-      
-      foodImg.current.style.opacity = disapearingAmout/3;
+      let disapearingAmout = ((window.innerHeight - foodDetailsContainerRef.current.offsetTop) / foodDetailsContainerRef.current.clientHeight);
+
+      foodImg.current.style.opacity = disapearingAmout / 3;
       // foodImg.current.style.transform = `rotate(${3 + (1 - disapearingAmout)}deg) scale(${3 + (1 - disapearingAmout)})`;
       foodImg.current.style.transform = `scale(${3 + (1 - disapearingAmout)}) rotate(${35 + ((1 - disapearingAmout) * 4)}deg)`;
     } else {
@@ -78,7 +95,7 @@ function FoodWindow({ food, toggle }) {
               <span>{showPersianPrice(food.price)} <span className='text-[12px] text-[#6c757d] inline-block -rotate-90'>تومان</span></span>
               <AnimatePresence>
                 {inOrderList ? (
-                  <FoodCounter toggle={setInOrderList} />
+                  <FoodCounter inOrderList={inOrderList} toggle={setInOrderList} />
                 ) : (
 
                   <motion.div

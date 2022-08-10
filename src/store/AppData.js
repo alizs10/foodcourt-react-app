@@ -11,6 +11,7 @@ export const data = [
                 ingredients: "نان، پنیر پیتزا",
                 img: "./assets/pizza/pizza-1.jpg",
                 isAvailable: true,
+                catId: "1"
             },
             {
                 id: "2",
@@ -19,6 +20,7 @@ export const data = [
                 ingredients: "نان، پنیر پیتزا",
                 img: "./assets/pizza/pizza-2.jpg",
                 isAvailable: true,
+                catId: "1"
             },
             {
                 id: "3",
@@ -27,6 +29,7 @@ export const data = [
                 ingredients: "نان، پنیر پیتزا",
                 img: "./assets/pizza/pizza-3.jpg",
                 isAvailable: true,
+                catId: "1"
             },
             {
                 id: "4",
@@ -35,6 +38,7 @@ export const data = [
                 ingredients: "نان، پنیر پیتزا",
                 img: "./assets/pizza/pizza-4.jpg",
                 isAvailable: true,
+                catId: "1"
             },
         ]
     },
@@ -50,6 +54,7 @@ export const data = [
                 ingredients: "پیاز، آب مرغ، خامه، رب گوجه",
                 img: "./assets/soup/soup-1.jpg",
                 isAvailable: true,
+                catId: "2"
             },
             {
                 id: "2",
@@ -58,6 +63,7 @@ export const data = [
                 ingredients: "پیاز، آب مرغ، بروکلی",
                 img: "./assets/soup/soup-2.jpg",
                 isAvailable: true,
+                catId: "2"
             },
             {
                 id: "3",
@@ -66,6 +72,7 @@ export const data = [
                 ingredients: "پیاز، آب مرغ",
                 img: "./assets/soup/soup-3.jpg",
                 isAvailable: true,
+                catId: "2"
             },
             {
                 id: "4",
@@ -74,6 +81,7 @@ export const data = [
                 ingredients: "پیاز، آب مرغ، شیر رب گوجه",
                 img: "./assets/soup/soup-4.png",
                 isAvailable: true,
+                catId: "2"
             },
         ]
     },
@@ -89,6 +97,7 @@ export const data = [
                 ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
                 img: "./assets/burger/burger-1.jpg",
                 isAvailable: true,
+                catId: "3"
             },
             {
                 id: "2",
@@ -97,6 +106,7 @@ export const data = [
                 ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
                 img: "./assets/burger/burger-2.jpg",
                 isAvailable: true,
+                catId: "3"
             },
             {
                 id: "3",
@@ -105,6 +115,7 @@ export const data = [
                 ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
                 img: "./assets/burger/burger-3.jpg",
                 isAvailable: true,
+                catId: "3"
             },
         ]
     },
@@ -120,6 +131,7 @@ export const data = [
                 ingredients: "خامه، نودل",
                 img: "./assets/pasta/pasta-1.jpg",
                 isAvailable: true,
+                catId: "4"
             },
             {
                 id: "2",
@@ -128,6 +140,7 @@ export const data = [
                 ingredients: "خامه، نودل",
                 img: "./assets/pasta/pasta-2.jpg",
                 isAvailable: true,
+                catId: "4"
             },
             {
                 id: "3",
@@ -136,6 +149,7 @@ export const data = [
                 ingredients: "خامه، نودل",
                 img: "./assets/pasta/pasta-3.jpg",
                 isAvailable: true,
+                catId: "4"
             },
         ]
     },
@@ -151,6 +165,7 @@ export const data = [
                 ingredients: "نان باگت، کالباس، گوجه، خیارشور",
                 img: "./assets/sandwich/sandwich-1.jpg",
                 isAvailable: true,
+                catId: "5"
             },
             {
                 id: "2",
@@ -159,6 +174,7 @@ export const data = [
                 ingredients: "نان باگت، کالباس، گوجه، خیارشور",
                 img: "./assets/sandwich/sandwich-2.jpg",
                 isAvailable: true,
+                catId: "5"
             },
             {
                 id: "3",
@@ -167,6 +183,7 @@ export const data = [
                 ingredients: "نان باگت، کالباس، گوجه، خیارشور",
                 img: "./assets/sandwich/sandwich-3.jpg",
                 isAvailable: true,
+                catId: "5"
             },
         ]
     },
@@ -182,6 +199,7 @@ export const data = [
                 ingredients: "کاهو، کوجه",
                 img: "./assets/salad/salad-1.jpg",
                 isAvailable: true,
+                catId: "6"
             },
             {
                 id: "2",
@@ -190,6 +208,7 @@ export const data = [
                 ingredients: "کاهو، کوجه",
                 img: "./assets/salad/salad-2.jpg",
                 isAvailable: true,
+                catId: "6"
             },
             {
                 id: "3",
@@ -198,6 +217,7 @@ export const data = [
                 ingredients: "کاهو، کوجه",
                 img: "./assets/salad/salad-3.jpg",
                 isAvailable: true,
+                catId: "6"
             },
         ]
     },
@@ -213,6 +233,7 @@ export const data = [
                 ingredients: "کوکاکولا مشکی",
                 img: "./assets/drinks/drink-1.jpg",
                 isAvailable: true,
+                catId: "7"
             },
             {
                 id: "2",
@@ -221,6 +242,7 @@ export const data = [
                 ingredients: "آب گازدار، لیمو، برگ لیمو",
                 img: "./assets/drinks/drink-2.jpg",
                 isAvailable: true,
+                catId: "7"
             },
             {
                 id: "3",
@@ -229,6 +251,7 @@ export const data = [
                 ingredients: "پپسی",
                 img: "./assets/drinks/drink-3.jpg",
                 isAvailable: true,
+                catId: "7"
             },
             {
                 id: "4",
@@ -237,6 +260,7 @@ export const data = [
                 ingredients: "آب، یخ، آب انار، لیموی تازه",
                 img: "./assets/drinks/drink-4.jpg",
                 isAvailable: true,
+                catId: "7"
             },
         ]
     },
@@ -252,6 +276,7 @@ export const data = [
                 ingredients: "شکلات، گردو",
                 img: "./assets/dessert/dessert-1.jpg",
                 isAvailable: true,
+                catId: "8"
             },
             {
                 id: "2",
@@ -260,6 +285,7 @@ export const data = [
                 ingredients: "شکلات، گردو",
                 img: "./assets/dessert/dessert-2.jpg",
                 isAvailable: true,
+                catId: "8"
             },
             {
                 id: "3",
@@ -268,6 +294,7 @@ export const data = [
                 ingredients: "شکلات، گردو",
                 img: "./assets/dessert/dessert-3.jpg",
                 isAvailable: true,
+                catId: "8"
             },
         ]
     },
@@ -283,6 +310,7 @@ export const data = [
                 ingredients: "قهوه، شکلات تلخ",
                 img: "./assets/coffee/coffee-1.jpg",
                 isAvailable: true,
+                catId: "9"
             },
             {
                 id: "2",
@@ -291,6 +319,7 @@ export const data = [
                 ingredients: "آب جوش، شکلات تلخ",
                 img: "./assets/coffee/coffee-2.jpg",
                 isAvailable: true,
+                catId: "9"
             },
             {
                 id: "3",
@@ -299,6 +328,7 @@ export const data = [
                 ingredients: "چای معطر",
                 img: "./assets/coffee/coffee-3.jpg",
                 isAvailable: true,
+                catId: "9"
             },
         ]
     },

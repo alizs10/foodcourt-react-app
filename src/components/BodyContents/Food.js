@@ -12,18 +12,18 @@ function Food({ food, catId }) {
   const { items, setItems } = useContext(OrderListContext)
 
   const [inOrderList, setInOrderList] = useState(false);
-  const [count, setCount] = useState("1");
+  
 
   useEffect(() => {
 
     let res = isInList(food.id, catId, items);
     if (res) {
-      console.log(res);
+  
       setInOrderList(res)
-      setCount(res.count.toString())
+  
     } else {
       setInOrderList(res)
-      setCount(1)
+  
     }
 
   }, [items])

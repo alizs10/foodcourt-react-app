@@ -7,27 +7,21 @@ import OrderListContext from '../../context/OrderListContext';
 
 function FoodCounter({ toggle, inOrderList }) {
 
-
     const { items, setItems } = useContext(OrderListContext)
 
     const [item, setItem] = useState(inOrderList)
+    const [update, setUpdate] = useState(false)
 
-    const [quantity, setQuantity] = useState(1);
-
-
-    useEffect(() => {
-        if (item) {
-            setQuantity(item.count)
-        }
-    }, [item])
 
     const handleIncreaseQuantity = () => {
-        setQuantity(quantity + 1);
 
         let id = item.id;
         let index = items.findIndex(item => item.id == id)
         let matchedItem = items[index]
         matchedItem.count += 1;
+
+        setItem(matchedItem)
+        setUpdate(!update)
     }
 
     const handleDecreaseQuantity = () => {
@@ -37,13 +31,14 @@ function FoodCounter({ toggle, inOrderList }) {
         let matchedItem = items[index]
 
         if (matchedItem.count >= 2) {
-            setQuantity(quantity - 1);
             matchedItem.count -= 1;
+            setItem(matchedItem)
+            setUpdate(!update)
 
         } else {
             let filteredItems = items.filter(item => item.id != matchedItem.id)
             setItems(filteredItems)
-            setQuantity(1);
+            setItem({})
             toggle(false)
         }
     }
@@ -56,9 +51,9 @@ function FoodCounter({ toggle, inOrderList }) {
             onClick={e => e.stopPropagation()}
             className="select-none flex justify-end md:mt-5 ml-2 gap-x-2 items-center text-[#5e6472]">
             <span onClick={() => handleIncreaseQuantity()} className="cursor-pointer fa fa-plus p-2 text-base md:text-lg"></span>
-            <span className="text-sm md:text-base font-bold w-10 text-center">{e2pNumbers(quantity.toString())}</span>
+            <span className="text-sm md:text-base font-bold w-10 text-center">{e2pNumbers(item.count.toString())}</span>
 
-            {quantity == 1 ?
+            {item.count == 1 ?
                 (
                     <span onClick={() => handleDecreaseQuantity()} className="cursor-pointer fa fa-trash p-2 text-base md:text-lg"></span>
 
