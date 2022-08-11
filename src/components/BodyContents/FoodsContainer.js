@@ -6,7 +6,7 @@ function FoodsContainer({ title, foods, catId }) {
 
     const foodsContainerRef = useRef(null)
 
-    const { selectedCategory, setSelectedCategory, shouldScroll, setShouldScroll } = useContext(FoodContext)
+    const { setSelectedCategory, shouldScroll, setShouldScroll } = useContext(FoodContext)
 
 
     const [pageY, setPageY] = useState(0)
@@ -24,9 +24,9 @@ function FoodsContainer({ title, foods, catId }) {
     useEffect(() => {
 
         if (!shouldScroll) {
-            console.log("here");
+            
             let currection;
-            if (pageY > window.scrollY) {
+            if (foodsContainerRef.current.offsetTop > window.scrollY) {
                 currection = 200;
             } else {
                 currection = 300;

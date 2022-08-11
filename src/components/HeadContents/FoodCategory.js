@@ -28,7 +28,6 @@ function FoodCategory({ category, selected, parentRef, first, last }) {
       let selectedCategoryNode = document.getElementById(`food-category-${selectedCategory}`)
       let currection = (parentRef.current.offsetWidth / 2);
 
-      console.log(currection);
       
       parentRef.current.style.scrollBehavior = "smooth";
       parentRef.current.scrollLeft = selectedCategoryNode.offsetLeft - currection;
@@ -56,7 +55,7 @@ function FoodCategory({ category, selected, parentRef, first, last }) {
     window.scrollTo({ top: position - currection, behavior: 'smooth' });
     setTimeout(()=>{
       setShouldScroll(false);
-      console.log("now");
+     
     }, 1500)
   }
 
