@@ -6,7 +6,7 @@ const FoodContext = React.createContext({
     food: {},
     setFood: () => {},
     selectedCategory: "",
-    setSelectedCategory: () => {}
+    setSelectedCategory: () => {},
 })
 
 

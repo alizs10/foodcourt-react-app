@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import FoodContext from '../../context/FoodContext'
 import Food from './Food'
 
@@ -6,27 +6,38 @@ function FoodsContainer({ title, foods, catId }) {
 
     const foodsContainerRef = useRef(null)
 
-    const { selectedCategory } = useContext(FoodContext)
+    const { selectedCategory, setSelectedCategory, shouldScroll, setShouldScroll } = useContext(FoodContext)
+
+
+    const [pageY, setPageY] = useState(0)
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleWindowScroll)
+
+        return () => window.removeEventListener('scroll', handleWindowScroll)
+    }, [])
+
+    const handleWindowScroll = () => {
+        setPageY(window.scrollY)
+    }
 
     useEffect(() => {
 
-        if (catId == selectedCategory) {
-            let position = foodsContainerRef.current.offsetTop;
-            let currection;
-
-            if (position > window.scrollY) {
-                currection = 200;
-            } else {
-                currection = 300;
-            }
-
-            window.scrollTo({ top: position - currection, behavior: 'smooth' });
+        let currection;
+        if (pageY > window.scrollY) {
+            currection = 200;
+        } else {
+            currection = 300;
         }
 
-    }, [selectedCategory])
+        if (pageY - currection == foodsContainerRef.current.offsetTop) {
+            setSelectedCategory(catId)
+        }
+    }, [pageY])
+
 
     return (
-        <div ref={foodsContainerRef} className='py-3'>
+        <div ref={foodsContainerRef} id={`food-container-${catId}`} className='py-3'>
             <span className="flex items-center mx-auto w-fit gap-x-2 py-3 text-xs md:text-base text-[#5e6472]">
                 <div className='flex'>
                     <i className="fa fa-star text-[8px] md:text-[10px]"></i>

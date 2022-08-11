@@ -22,7 +22,9 @@ function App() {
           foodWindowVisibility,
           setFoodWindowVisibility,
           food,
-          setFood, selectedCategory, setSelectedCategory
+          setFood,
+          selectedCategory,
+          setSelectedCategory,
         }}>
           <Head />
           <Body />
