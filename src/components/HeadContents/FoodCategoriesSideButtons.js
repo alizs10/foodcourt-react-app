@@ -9,6 +9,7 @@ function FoodCategoriesSideButtons({ children, isScrollable, handleScrollLeft, h
                     <i className="fa-regular fa-circle-right"></i>
                 </button>
             ) : null}
+            
             {children}
 
             {isScrollable ? (

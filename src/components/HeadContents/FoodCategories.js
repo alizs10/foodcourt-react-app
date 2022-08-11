@@ -11,11 +11,13 @@ function FoodCategories({ foodCategoriesRef }) {
 
   return (
 
-    <div ref={foodCategoriesRef} className="w-4/5 px-[28rem] flex flex-nowrap gap-x-4 md:gap-x-8 overflow-x-scroll p-2 noscrollbar">
+    <div ref={foodCategoriesRef} className="w-4/5 flex flex-nowrap gap-x-4 md:gap-x-8 overflow-x-scroll py-2 noscrollbar">
 
-      {categories.map(cat => (
-        <FoodCategory key={cat.id} parentRef={foodCategoriesRef} category={cat} selected={selectedCategory == cat.id ? "true" : "false"} />
-      ))}
+      {categories.map((cat, index) => {
+        let first = index == 0 ? true : false;
+        let last = index == categories.length - 1 ? true : false;
+        return <FoodCategory key={cat.id} parentRef={foodCategoriesRef} first={first} last={last} category={cat} selected={selectedCategory == cat.id ? "true" : "false"} />
+      })}
 
     </div>
   )

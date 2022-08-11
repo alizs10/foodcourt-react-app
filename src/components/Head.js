@@ -9,21 +9,42 @@ function Head() {
 
     let oldScrollY = 0;
     const [isScrollingDown, setIsScrollingDown] = useState(false)
+    const [isScrollable, setIsScrollable] = useState(false)
+
 
     const logoRef = useRef(null)
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        const handleResize = () => {
+
+            if (foodCategoriesRef.current.scrollWidth > (4 / 5 * window.innerWidth)) {
+                setIsScrollable(true)
+            } else {
+                setIsScrollable(false)
+            }
+
+            console.log(foodCategoriesRef.current.scrollWidth > (4 / 5 * window.innerWidth));
+        }
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+
+            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('resize', handleResize)
+        }
+
+
     }, []);
 
     const handleScroll = () => {
 
         if (window.scrollY - oldScrollY > 50) {
             setIsScrollingDown(true);
-        } 
-        
-        if ((oldScrollY - window.scrollY > 50)){
+        }
+
+        if ((oldScrollY - window.scrollY > 50)) {
             setIsScrollingDown(false);
         }
 
@@ -32,8 +53,6 @@ function Head() {
         }
     }
 
-
-    const [isScrollable, setIsScrollable] = useState(false)
 
     const handleScrollRight = () => {
         let childs = foodCategoriesRef.current.children.length;
@@ -52,17 +71,7 @@ function Head() {
 
     const foodCategoriesRef = useRef(null)
 
-    useEffect(() => {
-        let hasScrollbar = foodCategoriesRef.current.scrollWidth > foodCategoriesRef.current.clientWidth;
 
-        if (hasScrollbar) {
-            setIsScrollable(true)
-        } else {
-
-            setIsScrollable(false)
-        }
-
-    }, [])
 
     return (
         <motion.div

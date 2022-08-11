@@ -30,9 +30,11 @@ function FoodsContainer({ title, foods, catId }) {
             currection = 300;
         }
 
+
         if (pageY - currection == foodsContainerRef.current.offsetTop) {
             setSelectedCategory(catId)
         }
+
     }, [pageY])
 
 
