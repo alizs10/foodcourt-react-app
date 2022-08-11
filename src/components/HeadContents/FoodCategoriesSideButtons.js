@@ -14,7 +14,7 @@ function FoodCategoriesSideButtons({ children, isScrollable, handleScrollLeft, h
 
             {isScrollable ? (
                 <button className="text-lg md:text-3xl text-white" onClick={handleScrollLeft}>
-                    <i className="fa fa-circle-left"></i>
+                    <i className="fa-regular fa-circle-left"></i>
                 </button>
             ) : null}
         </div>

@@ -23,16 +23,22 @@ function FoodsContainer({ title, foods, catId }) {
 
     useEffect(() => {
 
-        let currection;
-        if (pageY > window.scrollY) {
-            currection = 200;
-        } else {
-            currection = 300;
-        }
+        if (!shouldScroll) {
+            console.log("here");
+            let currection;
+            if (pageY > window.scrollY) {
+                currection = 200;
+            } else {
+                currection = 300;
+            }
 
+            let positionStart = foodsContainerRef.current.offsetTop - currection;
+            let positionEnd = foodsContainerRef.current.clientHeight + positionStart;
 
-        if (pageY - currection == foodsContainerRef.current.offsetTop) {
-            setSelectedCategory(catId)
+            if (pageY > positionStart && pageY < positionEnd) {
+                setSelectedCategory(catId)
+            }
+
         }
 
     }, [pageY])

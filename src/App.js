@@ -14,6 +14,7 @@ function App() {
   const [food, setFood] = useState({})
 
   const [selectedCategory, setSelectedCategory] = useState("1")
+  const [shouldScroll, setShouldScroll] = useState(false)
 
   return (
     <>
@@ -25,6 +26,8 @@ function App() {
           setFood,
           selectedCategory,
           setSelectedCategory,
+          shouldScroll,
+          setShouldScroll
         }}>
           <Head />
           <Body />

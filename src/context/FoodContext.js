@@ -7,6 +7,8 @@ const FoodContext = React.createContext({
     setFood: () => {},
     selectedCategory: "",
     setSelectedCategory: () => {},
+    shouldScroll: false,
+    setShouldScroll: () => {}
 })
 
 

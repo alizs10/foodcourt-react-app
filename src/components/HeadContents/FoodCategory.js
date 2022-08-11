@@ -3,7 +3,7 @@ import FoodContext from '../../context/FoodContext';
 
 function FoodCategory({ category, selected, parentRef, first, last }) {
 
-  const { setSelectedCategory, selectedCategory } = useContext(FoodContext)
+  const { setSelectedCategory, selectedCategory, setShouldScroll } = useContext(FoodContext)
 
   const foodCatRef = useRef(null)
 
@@ -39,6 +39,7 @@ function FoodCategory({ category, selected, parentRef, first, last }) {
 
   const handleSelectingCategory = () => {
   
+    setShouldScroll(true);
     setSelectedCategory(category.id)
   
     let targetCategory = document.getElementById(`food-container-${category.id}`);
@@ -53,6 +54,10 @@ function FoodCategory({ category, selected, parentRef, first, last }) {
     }
 
     window.scrollTo({ top: position - currection, behavior: 'smooth' });
+    setTimeout(()=>{
+      setShouldScroll(false);
+      console.log("now");
+    }, 1500)
   }
 
   return (
