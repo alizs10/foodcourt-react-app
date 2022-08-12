@@ -41,14 +41,26 @@ function FoodWindow({ food, toggle }) {
 
     document.body.addEventListener('pointerup', function remover() {
 
-      if (foodDetailsContainerRef.current.offsetTop < foodDetailsContainerRef.current.clientHeight) {
-        foodDetailsContainerRef.current.style.top = `${foodDetailsContainerRef.current.clientHeight}px`;
+      let max = (1/3 * window.innerHeight);
+      let min = 2/3 * window.innerHeight;
+      let exit = 5/6 * window.innerHeight;
+
+      // set max limit
+      if (foodDetailsContainerRef.current.offsetTop < max) {
+        foodDetailsContainerRef.current.style.top = `${max}px`;
+      }
+
+      //set min limit
+      if (foodDetailsContainerRef.current.offsetTop > max && foodDetailsContainerRef.current.offsetTop > min && foodDetailsContainerRef.current.offsetTop < exit) {
+        foodDetailsContainerRef.current.style.top = `${min}px`;
+        foodImg.current.style.opacity = 1;
+        foodImg.current.style.transform = "scale(1)";
       }
       document.body.removeEventListener('pointermove', grabbing)
       document.body.removeEventListener('pointerup', remover)
 
 
-      if (foodDetailsContainerRef.current.clientHeight > (window.innerHeight - foodDetailsContainerRef.current.offsetTop)) {
+      if (window.innerHeight - foodDetailsContainerRef.current.offsetTop < 150) {
         toggle(false)
       }
     }
@@ -66,7 +78,6 @@ function FoodWindow({ food, toggle }) {
       let disapearingAmout = ((window.innerHeight - foodDetailsContainerRef.current.offsetTop) / foodDetailsContainerRef.current.clientHeight);
 
       foodImg.current.style.opacity = disapearingAmout / 3;
-      // foodImg.current.style.transform = `rotate(${3 + (1 - disapearingAmout)}deg) scale(${3 + (1 - disapearingAmout)})`;
       foodImg.current.style.transform = `scale(${3 + (1 - disapearingAmout)}) rotate(${35 + ((1 - disapearingAmout) * 4)}deg)`;
     } else {
       foodImg.current.style.opacity = 1;
@@ -87,7 +98,7 @@ function FoodWindow({ food, toggle }) {
         <div ref={foodDetailsContainerRef} onPointerDown={e => {
           e.stopPropagation()
           handlePointerDown(e)
-        }} className="absolute select-none touch-none flex flex-col gap-y-2 bottom-26 h-fit left-0 w-full rounded-t-3xl p-3 bg-white">
+        }} className="absolute select-none touch-none flex flex-col gap-y-2 bottom-26 min-h-fit left-0 w-full rounded-t-3xl p-3 bg-white">
 
           <span className="w-1/5 h-1 bg-black/40 rounded-full self-center"></span>
           <span className="font-bold text-xl">{food.name}</span>

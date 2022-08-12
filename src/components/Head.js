@@ -25,7 +25,6 @@ function Head() {
                 setIsScrollable(false)
             }
 
-            console.log(foodCategoriesRef.current.scrollWidth > (4 / 5 * window.innerWidth));
         }
         window.addEventListener('resize', handleResize)
 
