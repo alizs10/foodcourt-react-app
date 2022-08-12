@@ -9,7 +9,7 @@ export const data = [
                 name: "پیتزا آمریکایی",
                 price: "220000",
                 ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-1.jpg",
+                img: "./assets/pizza/pizza-1.webp",
                 isAvailable: true,
                 catId: "1"
             },
@@ -18,7 +18,7 @@ export const data = [
                 name: "پیتزا ایتالیایی",
                 price: "240000",
                 ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-2.jpg",
+                img: "./assets/pizza/pizza-2.webp",
                 isAvailable: true,
                 catId: "1"
             },
@@ -27,7 +27,7 @@ export const data = [
                 name: "پیتزا",
                 price: "200000",
                 ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-3.jpg",
+                img: "./assets/pizza/pizza-3.webp",
                 isAvailable: true,
                 catId: "1"
             },
@@ -36,7 +36,7 @@ export const data = [
                 name: "پیتزا",
                 price: "120000",
                 ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-4.jpg",
+                img: "./assets/pizza/pizza-4.webp",
                 isAvailable: true,
                 catId: "1"
             },
@@ -52,7 +52,7 @@ export const data = [
                 name: "سوپ خامه",
                 price: "48000",
                 ingredients: "پیاز، آب مرغ، خامه، رب گوجه",
-                img: "./assets/soup/soup-1.jpg",
+                img: "./assets/soup/soup-1.webp",
                 isAvailable: true,
                 catId: "2"
             },
@@ -61,7 +61,7 @@ export const data = [
                 name: "سوپ بروکلی",
                 price: "35000",
                 ingredients: "پیاز، آب مرغ، بروکلی",
-                img: "./assets/soup/soup-2.jpg",
+                img: "./assets/soup/soup-2.webp",
                 isAvailable: true,
                 catId: "2"
             },
@@ -70,7 +70,7 @@ export const data = [
                 name: "سوپ پیاز",
                 price: "35000",
                 ingredients: "پیاز، آب مرغ",
-                img: "./assets/soup/soup-3.jpg",
+                img: "./assets/soup/soup-3.webp",
                 isAvailable: true,
                 catId: "2"
             },
@@ -79,7 +79,7 @@ export const data = [
                 name: "سوپ شیر",
                 price: "62000",
                 ingredients: "پیاز، آب مرغ، شیر رب گوجه",
-                img: "./assets/soup/soup-4.png",
+                img: "./assets/soup/soup-4.webp",
                 isAvailable: true,
                 catId: "2"
             },
@@ -95,7 +95,7 @@ export const data = [
                 name: "برگر",
                 price: "78000",
                 ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
-                img: "./assets/burger/burger-1.jpg",
+                img: "./assets/burger/burger-1.webp",
                 isAvailable: true,
                 catId: "3"
             },
@@ -104,7 +104,7 @@ export const data = [
                 name: "برگر",
                 price: "99000",
                 ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
-                img: "./assets/burger/burger-2.jpg",
+                img: "./assets/burger/burger-2.webp",
                 isAvailable: true,
                 catId: "3"
             },
@@ -113,7 +113,7 @@ export const data = [
                 name: "برگر",
                 price: "110000",
                 ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
-                img: "./assets/burger/burger-3.jpg",
+                img: "./assets/burger/burger-3.webp",
                 isAvailable: true,
                 catId: "3"
             },
@@ -129,7 +129,7 @@ export const data = [
                 name: "پاستا",
                 price: "65000",
                 ingredients: "خامه، نودل",
-                img: "./assets/pasta/pasta-1.jpg",
+                img: "./assets/pasta/pasta-1.webp",
                 isAvailable: true,
                 catId: "4"
             },
@@ -138,7 +138,7 @@ export const data = [
                 name: "پاستا",
                 price: "45000",
                 ingredients: "خامه، نودل",
-                img: "./assets/pasta/pasta-2.jpg",
+                img: "./assets/pasta/pasta-2.webp",
                 isAvailable: true,
                 catId: "4"
             },
@@ -147,7 +147,7 @@ export const data = [
                 name: "پاستا",
                 price: "75000",
                 ingredients: "خامه، نودل",
-                img: "./assets/pasta/pasta-3.jpg",
+                img: "./assets/pasta/pasta-3.webp",
                 isAvailable: true,
                 catId: "4"
             },
@@ -231,7 +231,7 @@ export const data = [
                 name: "کوکاکولا",
                 price: "22000",
                 ingredients: "کوکاکولا مشکی",
-                img: "./assets/drinks/drink-1.jpg",
+                img: "./assets/drinks/drink-1.webp",
                 isAvailable: true,
                 catId: "7"
             },
@@ -240,7 +240,7 @@ export const data = [
                 name: "لیموناد",
                 price: "32000",
                 ingredients: "آب گازدار، لیمو، برگ لیمو",
-                img: "./assets/drinks/drink-2.jpg",
+                img: "./assets/drinks/drink-2.webp",
                 isAvailable: true,
                 catId: "7"
             },
@@ -249,7 +249,7 @@ export const data = [
                 name: "پپسی",
                 price: "20000",
                 ingredients: "پپسی",
-                img: "./assets/drinks/drink-3.jpg",
+                img: "./assets/drinks/drink-3.webp",
                 isAvailable: true,
                 catId: "7"
             },
@@ -258,7 +258,7 @@ export const data = [
                 name: "آب انار",
                 price: "40000",
                 ingredients: "آب، یخ، آب انار، لیموی تازه",
-                img: "./assets/drinks/drink-4.jpg",
+                img: "./assets/drinks/drink-4.webp",
                 isAvailable: true,
                 catId: "7"
             },
@@ -274,7 +274,7 @@ export const data = [
                 name: "کیک شکلاتی",
                 price: "45000",
                 ingredients: "شکلات، گردو",
-                img: "./assets/dessert/dessert-1.jpg",
+                img: "./assets/dessert/dessert-1.webp",
                 isAvailable: true,
                 catId: "8"
             },
@@ -283,7 +283,7 @@ export const data = [
                 name: "کیک شکلاتی",
                 price: "40000",
                 ingredients: "شکلات، گردو",
-                img: "./assets/dessert/dessert-2.jpg",
+                img: "./assets/dessert/dessert-2.webp",
                 isAvailable: true,
                 catId: "8"
             },
@@ -292,7 +292,7 @@ export const data = [
                 name: "کیک شکلاتی",
                 price: "55000",
                 ingredients: "شکلات، گردو",
-                img: "./assets/dessert/dessert-3.jpg",
+                img: "./assets/dessert/dessert-3.webp",
                 isAvailable: true,
                 catId: "8"
             },
@@ -308,7 +308,7 @@ export const data = [
                 name: "اسپرسو",
                 price: "48000",
                 ingredients: "قهوه، شکلات تلخ",
-                img: "./assets/coffee/coffee-1.jpg",
+                img: "./assets/coffee/coffee-1.webp",
                 isAvailable: true,
                 catId: "9"
             },
@@ -317,7 +317,7 @@ export const data = [
                 name: "شکلات داغ",
                 price: "38000",
                 ingredients: "آب جوش، شکلات تلخ",
-                img: "./assets/coffee/coffee-2.jpg",
+                img: "./assets/coffee/coffee-2.webp",
                 isAvailable: true,
                 catId: "9"
             },
@@ -326,7 +326,7 @@ export const data = [
                 name: "چای",
                 price: "28000",
                 ingredients: "چای معطر",
-                img: "./assets/coffee/coffee-3.jpg",
+                img: "./assets/coffee/coffee-3.webp",
                 isAvailable: true,
                 catId: "9"
             },
