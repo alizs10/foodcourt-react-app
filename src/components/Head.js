@@ -76,6 +76,7 @@ function Head() {
     return (
         <motion.div
             animate={isScrollingDown ? { top: `-${logoRef.current.clientHeight}px` } : { top: "0" }}
+            transition={{bounce: "none"}}
             className="fixed top-0 left-0 right-0 z-10 shadow-lg bg-[#DDE5B6]">
             <div ref={logoRef} className='flex flex-col gap-4 bg-[#DDE5B6] py-2'>
                 <div

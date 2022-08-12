@@ -29,9 +29,9 @@ function App() {
           shouldScroll,
           setShouldScroll
         }}>
+          <OrderListContainer />
           <Head />
           <Body />
-          <OrderListContainer />
         </FoodContext.Provider>
       </OrderListContext.Provider>
     </>

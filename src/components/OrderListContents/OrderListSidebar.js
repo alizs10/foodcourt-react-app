@@ -26,6 +26,7 @@ function OrderListSidebar() {
             initial={{ left: "-30%" }}
             animate={{ left: 0 }}
             exit={{ left: "-30%" }}
+            transition={{ bounce: "none" }}
             className={`fixed z-50 flex flex-col gap-y-4 shadow-md top-0 bottom-0 bg-white text-[#5e6472] w-3/4 md:w-1/2 lg:w-1/3`}>
 
             <span className={`mt-8 mx-8 flex ${items.length > 0 ? 'justify-between' : 'justify-center'} items-center`}>
