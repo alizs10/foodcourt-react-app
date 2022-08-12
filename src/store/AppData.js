@@ -10,7 +10,7 @@ export const data = [
                 price: "220000",
                 ingredients: "نان، پنیر پیتزا",
                 img: "./assets/pizza/pizza-1.webp",
-                isAvailable: true,
+                isAvailable: false,
                 catId: "1"
             },
             {
@@ -309,7 +309,7 @@ export const data = [
                 price: "48000",
                 ingredients: "قهوه، شکلات تلخ",
                 img: "./assets/coffee/coffee-1.webp",
-                isAvailable: true,
+                isAvailable: false,
                 catId: "9"
             },
             {

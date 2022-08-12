@@ -56,7 +56,7 @@ function Food({ food, catId }) {
       </div>
       <div className='w-[calc(100%_-_29vw)] md:w-[calc(100%_-_16vw)] flex flex-col gap-y-2'>
         <span className='text-xs md:text-sm lg:text-lg font-bold'>{food.name}</span>
-        <span className='md:mt-4 text-[14px] md:text-xs lg:text-sm'>محتویات: {food.ingredients}</span>
+        <span className='text-[14px] md:text-xs lg:text-sm'>محتویات: {food.ingredients}</span>
         {food.isAvailable ? (
 
           <>
@@ -81,8 +81,8 @@ function Food({ food, catId }) {
           </>
         ) : (
 
-          <div className='flex justify-end mb-4'>
-            <div className='px-3 md:px-6 ml-2 md:ml-5 -rotate-12 mt-5 md:mt-10 text-xs md:text-base font-bold py-1 border-2 md:border-4 border-black'>تمام شد</div>
+          <div className='flex-center md:mt-4'>
+            <div className=' px-3 md:px-6 -rotate-12 text-xs md:text-base font-bold py-1 border-2 md:border-4 border-black'>تمام شد</div>
           </div>
 
         )}

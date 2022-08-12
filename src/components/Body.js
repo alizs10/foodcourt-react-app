@@ -16,7 +16,7 @@ function Body() {
 
   return (
 
-    <div className='mt-44 md:mt-64 mx-2 md:mx-auto md:w-4/5 flex flex-col gap-y-2 md:gap-y-3'>
+    <div className='mt-44 pb-20 md:mt-64 mx-2 md:mx-auto md:w-4/5 flex flex-col gap-y-2 md:gap-y-3'>
 
       {categories.map((category) => (
         <FoodsContainer key={category.id} catId={category.id} title={category.name} foods={category.foods} />

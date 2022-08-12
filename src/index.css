@@ -27,5 +27,5 @@ body {
 }
 
 .food-unavailable {
-  @apply col-span-2 md:col-span-1 cursor-pointer bg-[#adb5bd]/80 opacity-50 p-3 rounded-lg grid grid-cols-5 gap-x-2;
+  @apply col-span-2 md:col-span-1 h-28 md:h-48 cursor-pointer bg-[#adb5bd]/80 opacity-50 p-1 md:p-3 rounded-lg flex flex-nowrap gap-x-2;
 }
