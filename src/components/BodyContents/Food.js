@@ -42,25 +42,25 @@ function Food({ food, catId }) {
 
 
   return (
-    <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 md:col-span-1 grid grid-cols-5 cursor-pointer bg-[#E6DBB3]/60 p-1 md:p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
-      <div ref={ref} className="col-span-2 text-center">
+    <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 h-28 md:h-48 md:col-span-1 flex flex-nowrap cursor-pointer bg-[#E6DBB3]/60 p-1 md:p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
+      <div ref={ref} className="w-[29vw] h-full md:w-[16vw] text-center">
         {inView && (
           <>
-            <img className={`${!isImgLoaded && 'hidden'} w-full h-36 md:h-44 object-cover rounded-lg`} src={food.img} onLoad={() => setIsImageLoaded(true)} />
+            <img className={`${!isImgLoaded && 'hidden'} w-full h-full object-cover rounded-lg`} src={food.img} onLoad={() => setIsImageLoaded(true)} />
             {!isImgLoaded && (
-              <ImagePlaceholder classes="w-full h-36 md:h-44" />
+              <ImagePlaceholder classes="w-full h-full" />
             )}
           </>
         )}
 
       </div>
-      <div className='col-span-3 flex flex-col gap-y-2'>
-        <span className='text-sm md:text-lg font-bold'>{food.name}</span>
-        <span className='mt-4 text-xs md:text-sm'>محتویات: {food.ingredients}</span>
+      <div className='w-[calc(100%_-_29vw)] md:w-[calc(100%_-_16vw)] flex flex-col gap-y-2'>
+        <span className='text-xs md:text-sm lg:text-lg font-bold'>{food.name}</span>
+        <span className='md:mt-4 text-[14px] md:text-xs lg:text-sm'>محتویات: {food.ingredients}</span>
         {food.isAvailable ? (
 
           <>
-            <span className="text-sm md:text-base">{showPersianPrice(food.price)} <span className='text-[10px] pl-1 md:text-[12px] text-[#6c757d] inline-block -rotate-90'>تومان</span></span>
+            <span className="text-[14px] md:text-sm lg:text-base">{showPersianPrice(food.price)} <span className='text-[8px] pl-1 md:text-[12px] text-[#6c757d] inline-block -rotate-90'>تومان</span></span>
             <AnimatePresence>
               {inOrderList ? (
                 <FoodCounter inOrderList={inOrderList} toggle={setInOrderList} />
@@ -74,7 +74,7 @@ function Food({ food, catId }) {
                   <button onClick={e => {
                     e.stopPropagation()
                     handleAddToList(food)
-                  }} className='select-none px-2 ml-2 md:mt-5 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
+                  }} className='select-none text-xs md:text-sm px-2 ml-2 md:mt-5 text-[#ff9f1c] font-bold py-1 border-b-2 md:border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
                 </motion.div>
               )}
             </AnimatePresence>

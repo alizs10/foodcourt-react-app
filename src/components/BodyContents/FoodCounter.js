@@ -53,7 +53,7 @@ function FoodCounter({ toggle, inOrderList }) {
             <span onClick={e => {
                 e.stopPropagation();
                 handleIncreaseQuantity()
-            }} className="cursor-pointer fa fa-plus p-2 text-base md:text-lg"></span>
+            }} className="cursor-pointer fa fa-plus p-2 text-xs md:text-lg"></span>
             <span className="text-sm md:text-base font-bold w-10 text-center">{e2pNumbers(item.count.toString())}</span>
 
             {item.count == 1 ?
@@ -61,14 +61,14 @@ function FoodCounter({ toggle, inOrderList }) {
                     <span onClick={e => {
                         e.stopPropagation()
                         handleDecreaseQuantity()
-                    }} className="cursor-pointer fa fa-trash p-2 text-base md:text-lg"></span>
+                    }} className="cursor-pointer fa fa-trash p-2 text-xs md:text-lg"></span>
 
                 ) : (
 
                     <span onClick={e => {
                         e.stopPropagation()
                         handleDecreaseQuantity()
-                    }} className="cursor-pointer fa fa-minus p-2 text-base md:text-lg"></span>
+                    }} className="cursor-pointer fa fa-minus p-2 text-xs md:text-lg"></span>
                 )}
 
         </motion.div>
