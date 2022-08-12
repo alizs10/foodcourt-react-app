@@ -15,6 +15,7 @@ function App() {
 
   const [selectedCategory, setSelectedCategory] = useState("1")
   const [shouldScroll, setShouldScroll] = useState(false)
+  
 
   return (
     <>

@@ -61,7 +61,7 @@ function Food({ food, catId }) {
           <>
             <img className={`${!isImgLoaded && 'hidden'} w-full h-36 md:h-44 object-cover rounded-lg`} src={food.img} onLoad={() => setIsImageLoaded(true)} />
             {!isImgLoaded && (
-              <ImagePlaceholder />
+              <ImagePlaceholder classes="w-full h-36 md:h-44" />
             )}
           </>
         )}
