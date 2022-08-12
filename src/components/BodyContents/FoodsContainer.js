@@ -24,20 +24,22 @@ function FoodsContainer({ title, foods, catId }) {
     useEffect(() => {
 
         if (!shouldScroll) {
-            
-            let currection;
-            if (foodsContainerRef.current.offsetTop > window.scrollY) {
-                currection = 200;
-            } else {
-                currection = 300;
-            }
 
-            let positionStart = foodsContainerRef.current.offsetTop - currection;
-            let positionEnd = foodsContainerRef.current.clientHeight + positionStart;
+            setTimeout(() => {
+                let currection;
+                if (foodsContainerRef.current.offsetTop > window.scrollY) {
+                    currection = 200;
+                } else {
+                    currection = 300;
+                }
 
-            if (pageY > positionStart && pageY < positionEnd) {
-                setSelectedCategory(catId)
-            }
+                let positionStart = foodsContainerRef.current.offsetTop - currection;
+                let positionEnd = foodsContainerRef.current.clientHeight + positionStart;
+
+                if (pageY > positionStart && pageY < positionEnd) {
+                    setSelectedCategory(catId)
+                }
+            }, 800)
 
         }
 

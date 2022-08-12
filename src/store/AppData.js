@@ -163,7 +163,7 @@ export const data = [
                 name: "ساندویچ",
                 price: "120000",
                 ingredients: "نان باگت، کالباس، گوجه، خیارشور",
-                img: "./assets/sandwich/sandwich-1.jpg",
+                img: "./assets/sandwich/sandwich-1.webp",
                 isAvailable: true,
                 catId: "5"
             },
@@ -172,7 +172,7 @@ export const data = [
                 name: "ساندویچ",
                 price: "145000",
                 ingredients: "نان باگت، کالباس، گوجه، خیارشور",
-                img: "./assets/sandwich/sandwich-2.jpg",
+                img: "./assets/sandwich/sandwich-2.webp",
                 isAvailable: true,
                 catId: "5"
             },
@@ -181,7 +181,7 @@ export const data = [
                 name: "ساندویچ",
                 price: "132000",
                 ingredients: "نان باگت، کالباس، گوجه، خیارشور",
-                img: "./assets/sandwich/sandwich-3.jpg",
+                img: "./assets/sandwich/sandwich-3.webp",
                 isAvailable: true,
                 catId: "5"
             },
@@ -197,7 +197,7 @@ export const data = [
                 name: "سالاد",
                 price: "32000",
                 ingredients: "کاهو، کوجه",
-                img: "./assets/salad/salad-1.jpg",
+                img: "./assets/salad/salad-1.webp",
                 isAvailable: true,
                 catId: "6"
             },
@@ -206,7 +206,7 @@ export const data = [
                 name: "سالاد",
                 price: "45000",
                 ingredients: "کاهو، کوجه",
-                img: "./assets/salad/salad-2.jpg",
+                img: "./assets/salad/salad-2.webp",
                 isAvailable: true,
                 catId: "6"
             },
@@ -215,7 +215,7 @@ export const data = [
                 name: "سالاد",
                 price: "48000",
                 ingredients: "کاهو، کوجه",
-                img: "./assets/salad/salad-3.jpg",
+                img: "./assets/salad/salad-3.webp",
                 isAvailable: true,
                 catId: "6"
             },
