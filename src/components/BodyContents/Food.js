@@ -5,6 +5,8 @@ import FoodCounter from './FoodCounter';
 import { motion, AnimatePresence } from 'framer-motion';
 import FoodContext from '../../context/FoodContext';
 import OrderListContext from '../../context/OrderListContext';
+import { useInView } from 'react-intersection-observer';
+import ImagePlaceholder from './ImagePlaceholder';
 
 function Food({ food, catId }) {
 
@@ -12,18 +14,23 @@ function Food({ food, catId }) {
   const { items, setItems } = useContext(OrderListContext)
 
   const [inOrderList, setInOrderList] = useState(false);
-  
+  const [isImgLoaded, setIsImageLoaded] = useState(false);
+
+  const { ref, inView } = useInView({
+    rootMargin: "100px",
+    triggerOnce: true,
+  });
 
   useEffect(() => {
 
     let res = isInList(food.id, catId, items);
     if (res) {
-  
+
       setInOrderList(res)
-  
+
     } else {
       setInOrderList(res)
-  
+
     }
 
   }, [items])
@@ -35,7 +42,7 @@ function Food({ food, catId }) {
 
   const handleAddToList = () => {
 
-    
+
     const newItem = {
       id: generateId(),
       food,
@@ -49,8 +56,15 @@ function Food({ food, catId }) {
 
   return (
     <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 md:col-span-1 grid grid-cols-5 cursor-pointer bg-[#E6DBB3]/60 p-1 md:p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
-      <div className="col-span-2 text-center">
-        <img className='w-full h-36 md:h-44 object-cover rounded-lg' src={food.img} />
+      <div ref={ref} className="col-span-2 text-center">
+        {inView && (
+          <>
+            <img className={`${!isImgLoaded && 'hidden'} w-full h-36 md:h-44 object-cover rounded-lg`} src={food.img} onLoad={() => setIsImageLoaded(true)} />
+            {!isImgLoaded && (
+              <ImagePlaceholder />
+            )}
+          </>
+        )}
 
       </div>
       <div className='col-span-3 flex flex-col gap-y-2'>
