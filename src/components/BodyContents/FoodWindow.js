@@ -6,7 +6,7 @@ import FoodCounter from './FoodCounter'
 
 function FoodWindow({ food, toggle }) {
 
-  const { items } = useContext(OrderListContext)
+  const { items, handleAddToList } = useContext(OrderListContext)
   const [inOrderList, setInOrderList] = useState(false);
 
   const foodDetailsContainerRef = useRef(null);
@@ -78,13 +78,16 @@ function FoodWindow({ food, toggle }) {
   return (
     <div
       onClick={e => e.stopPropagation()}
-      className="cursor-grab overflow-hidden absolute z-50 grid grid-rows-3 top-0 bottom-0 left-0 md:left-1/3 w-full md:w-1/3 bg-[#DDE5B6] shadow-md">
+      className="cursor-grab overflow-hidden relative h-full grid grid-rows-3 md:w-2/5 w-full bg-[#DDE5B6] shadow-md">
       <div className="row-span-2 select-none">
         <img ref={foodImg} className='w-full h-full object-cover pointer-events-none transition-all' src={food.img} />
       </div>
 
       <div className='row-span-1 bg-white'>
-        <div ref={foodDetailsContainerRef} onPointerDown={e => handlePointerDown(e)} className="absolute select-none touch-none flex flex-col gap-y-2 bottom-0 h-fit left-0 w-full rounded-t-3xl p-3 bg-white">
+        <div ref={foodDetailsContainerRef} onPointerDown={e => {
+          e.stopPropagation()
+          handlePointerDown(e)
+        }} className="absolute select-none touch-none flex flex-col gap-y-2 bottom-26 h-fit left-0 w-full rounded-t-3xl p-3 bg-white">
 
           <span className="w-1/5 h-1 bg-black/40 rounded-full self-center"></span>
           <span className="font-bold text-xl">{food.name}</span>
@@ -103,7 +106,10 @@ function FoodWindow({ food, toggle }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className='flex justify-end'>
-                    <button onClick={() => setInOrderList(true)} className='select-none px-2 ml-2 mt-5 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
+                    <button onClick={e => {
+                      e.stopPropagation()
+                      handleAddToList(food)
+                    }} className='select-none px-2 ml-2 mt-5 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
                   </motion.div>
                 )}
               </AnimatePresence>

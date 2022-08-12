@@ -23,7 +23,7 @@ function BackDrop({ handleClick, toggler, children }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="bg-black/60 fixed z-40 top-0 right-0 bottom-0 left-0" onClick={handleClick}>
+                    className="bg-black/60 fixed flex-center z-40 top-0 right-0 bottom-0 left-0" onClick={handleClick}>
                     {children}
                 </motion.div>
             )}

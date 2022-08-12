@@ -5,6 +5,7 @@ import Head from "./components/Head";
 import OrderListContainer from "./components/OrderListContainer";
 import FoodContext from "./context/FoodContext";
 import OrderListContext from "./context/OrderListContext";
+import { generateId } from "./Helper/helpers";
 
 function App() {
 
@@ -15,11 +16,25 @@ function App() {
 
   const [selectedCategory, setSelectedCategory] = useState("1")
   const [shouldScroll, setShouldScroll] = useState(false)
-  
+
+
+
+  const handleAddToList = (food) => {
+
+
+    const newItem = {
+      id: generateId(),
+      food,
+      catId: food.catId,
+      count: 1
+    }
+
+    setItems([...items, newItem])
+  }
 
   return (
     <>
-      <OrderListContext.Provider value={{ items, setItems }}>
+      <OrderListContext.Provider value={{ items, setItems, handleAddToList }}>
         <FoodContext.Provider value={{
           foodWindowVisibility,
           setFoodWindowVisibility,

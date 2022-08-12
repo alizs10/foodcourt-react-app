@@ -66,7 +66,6 @@ function FoodCategory({ category, selected, parentRef, first, last }) {
     rootMargin: "100px",
     triggerOnce: true,
   })
-  console.log(inView)
 
   return (
     <div onClick={handleSelectingCategory} ref={foodCatRef} id={`food-category-${category.id}`} className={`min-w-[5rem] md:min-w-[7rem] ${first && 'mr-[40vw]'} ${last && 'ml-[40vw]'} h-24 md:h-32 flex-center flex-col gap-y-2 rounded-lg ${selected === "true" ? "bg-[#B3C581] h-28 md:h-36" : "bg-white/40 transition-all duration-500 hover:mt-2 hover:bg-white/60"} p-3 cursor-pointer`}>
