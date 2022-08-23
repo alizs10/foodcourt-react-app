@@ -17,6 +17,34 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("1")
   const [shouldScroll, setShouldScroll] = useState(false)
 
+  const [update, setUpdate] = useState(false)
+
+  const handleIncreaseQuantity = (item) => {
+
+    let id = item.id;
+    let index = items.findIndex(item => item.id == id)
+    let matchedItem = items[index]
+    matchedItem.count += 1;
+
+    setUpdate(!update)
+  }
+
+  const handleDecreaseQuantity = (item) => {
+
+    let id = item.id;
+    let index = items.findIndex(item => item.id == id)
+    let matchedItem = items[index]
+
+    if (matchedItem.count >= 2) {
+      matchedItem.count -= 1;
+      setUpdate(!update)
+
+    } else {
+      let filteredItems = items.filter(item => item.id != matchedItem.id)
+      setItems(filteredItems)
+    }
+  }
+
 
 
   const handleAddToList = (food) => {
@@ -34,7 +62,12 @@ function App() {
 
   return (
     <>
-      <OrderListContext.Provider value={{ items, setItems, handleAddToList }}>
+      <OrderListContext.Provider value={{
+        items, setItems, handleAddToList,
+        handleIncreaseQuantity,
+        handleDecreaseQuantity,
+        update
+      }}>
         <FoodContext.Provider value={{
           foodWindowVisibility,
           setFoodWindowVisibility,

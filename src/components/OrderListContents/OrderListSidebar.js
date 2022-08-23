@@ -3,10 +3,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import OrderListContext from '../../context/OrderListContext'
 import { calculateOrderList, e2pNumbers, showPersianPrice } from '../../Helper/helpers'
+import OrderItem from './OrderItem'
 
 function OrderListSidebar() {
 
-    const { items, setItems } = useContext(OrderListContext)
+    const { items, setItems, update } = useContext(OrderListContext)
 
     const [payPrice, setPayPrice] = useState(0);
 
@@ -14,7 +15,7 @@ function OrderListSidebar() {
 
         setPayPrice(calculateOrderList(items))
 
-    }, [items])
+    }, [items, update])
 
     const handleRemoveAllItems = () => {
         setItems([])
@@ -40,10 +41,7 @@ function OrderListSidebar() {
                 {items.length > 0 && (
 
                     items.map((item, index) => (
-                        <span key={item.id} className='flex justify-between border-b text-xs ms:text-sm'>
-                            <span className='mr-4 md:mr-8'>{`${e2pNumbers((index + 1).toString())}- ${item.food.name} (${e2pNumbers(item.count.toString())})`}</span>
-                            <span className='ml-4 md:ml-8'>{`${showPersianPrice(item.food.price)}`} <span className="inline-block mb-1 text-[10px] -rotate-90">تومان</span></span>
-                        </span>
+                        <OrderItem key={item.id} item={item} index={index}/>
                     ))
                 )}
             </div>
