@@ -143,29 +143,29 @@ export const data = [
         img: "./assets/cats/pasta-1.png",
         foods: [
             {
-                id: "1",
-                name: "پاستا",
+                id: "4",
+                name: "پنه آلفردو",
                 price: "65000",
-                ingredients: "خامه، نودل",
-                img: "./assets/pasta/pasta-1.webp",
+                ingredients: "فیله مرغ ، سس خامه و قارچ ، پنیر پارمزان ، بروکلی ( به انتخاب شما )",
+                img: "./assets/pasta/pasta-4.webp",
                 isAvailable: true,
                 catId: "4"
             },
             {
-                id: "2",
-                name: "پاستا",
+                id: "5",
+                name: "پنه آماتریچانا",
                 price: "45000",
-                ingredients: "خامه، نودل",
-                img: "./assets/pasta/pasta-2.webp",
+                ingredients: "بیکن ، جعفری و ریحان ، پنیر پارمزان ، سس گوجه  ، بوکاتینی",
+                img: "./assets/pasta/pasta-5.webp",
                 isAvailable: true,
                 catId: "4"
             },
             {
-                id: "3",
-                name: "پاستا",
+                id: "6",
+                name: "پنه پستو تنوری ",
                 price: "75000",
-                ingredients: "خامه، نودل",
-                img: "./assets/pasta/pasta-3.webp",
+                ingredients: "کدو ، ریحان ، گردو ، پنیر پارمزان",
+                img: "./assets/pasta/pasta-6.webp",
                 isAvailable: true,
                 catId: "4"
             },
@@ -177,29 +177,29 @@ export const data = [
         img: "./assets/cats/sandwich-1.png",
         foods: [
             {
-                id: "4",
+                id: "7",
                 name: "ساندویچ پنینی گوشت",
                 price: "120000",
                 ingredients: "گوشت چرخ کرده ، قارچ ، فلفل دلمه ای ، سیر ، پنیر ورقه ای گودا",
-                img: "./assets/sandwich/sandwich-4.webp",
+                img: "./assets/sandwich/sandwich-7.webp",
                 isAvailable: true,
                 catId: "5"
             },
             {
-                id: "5",
+                id: "9",
                 name: "ساندویچ پنینی مرغ و قارچ",
                 price: "145000",
                 ingredients: "فیله مرغ ، قارچ ، کاهو ، پنیر ورقه ای چدار",
-                img: "./assets/sandwich/sandwich-5.webp",
+                img: "./assets/sandwich/sandwich-9.webp",
                 isAvailable: true,
                 catId: "5"
             },
             {
-                id: "6",
+                id: "8",
                 name: "ساندویچ پنینی مرغ و اسفناج",
                 price: "132000",
                 ingredients: "فیله مرغ ، اسفناج ، قارچ ، پیاز ، گردو ، پنیر ورقه ای موزارلا",
-                img: "./assets/sandwich/sandwich-6.webp",
+                img: "./assets/sandwich/sandwich-8.webp",
                 isAvailable: true,
                 catId: "5"
             },
@@ -207,7 +207,7 @@ export const data = [
     },
     {
         id: "10",
-        name: "سوخاری",
+        name: "فرایز",
         img: "./assets/cats/fry-1.png",
         foods: [
             {
@@ -229,11 +229,11 @@ export const data = [
                 catId: "10"
             },
             {
-                id: "3",
+                id: "4",
                 name: "سیب زمینی سوخاری",
                 price: "48000",
                 ingredients: "",
-                img: "./assets/fry/fry-3.webp",
+                img: "./assets/fry/fry-4.webp",
                 isAvailable: true,
                 catId: "10"
             },
@@ -254,11 +254,11 @@ export const data = [
                 catId: "6"
             },
             {
-                id: "5",
+                id: "7",
                 name: "سالاد یونانی",
                 price: "45000",
                 ingredients: "پیاز قرمز ، زیتون سیاه ، خیار ، گوجه گیلاسی ، فلفل دلمه ای ، پنیر فتا",
-                img: "./assets/salad/salad-5.webp",
+                img: "./assets/salad/salad-7.webp",
                 isAvailable: true,
                 catId: "6"
             },
