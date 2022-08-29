@@ -123,7 +123,7 @@ function FoodWindow({ food, toggle }) {
                     <button onClick={e => {
                       e.stopPropagation()
                       handleAddToList(food)
-                    }} className='select-none px-2 ml-2 mt-5 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
+                    }} className='select-none px-2 ml-2 text-[#ff9f1c] font-bold py-1 border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
                   </motion.div>
                 )}
               </AnimatePresence>

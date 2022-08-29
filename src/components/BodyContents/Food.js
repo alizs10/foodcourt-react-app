@@ -42,7 +42,7 @@ function Food({ food, catId }) {
 
 
   return (
-    <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 h-28 md:h-48 md:col-span-1 flex flex-nowrap cursor-pointer bg-[#E6DBB3]/60 p-1 md:p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
+    <div onClick={() => handleShowFoodWindow()} className={food.isAvailable ? "col-span-2 min-h-min md:h-48 md:col-span-1 flex flex-nowrap cursor-pointer bg-[#E6DBB3]/60 p-1 md:p-3 rounded-lg gap-x-2 transition-all duration-500 hover:bg-[#E6DBB3]/80" : "food-unavailable"}>
       <div ref={ref} className="w-[29vw] h-full md:w-[16vw] text-center">
         {inView && (
           <>
@@ -72,19 +72,19 @@ function Food({ food, catId }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className='flex justify-end'>
+                  className='flex justify-end mt-auto'>
                   <button onClick={e => {
                     e.stopPropagation()
                     handleAddToList(food)
-                  }} className='select-none text-xs md:text-sm px-2 ml-2 md:mt-5 text-[#ff9f1c] font-bold py-1 border-b-2 md:border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
+                  }} className='select-none text-xs md:text-sm px-2 ml-2 text-[#ff9f1c] font-bold py-1 border-b-2 md:border-b-4 border-[#ff9f1c] transition-all duration-500 hover:text-[#6c757d] hover:border-[#6c757d]'>ثبت سفارش</button>
                 </motion.div>
               )}
             </AnimatePresence>
           </>
         ) : (
 
-          <div className='flex-center md:mt-4'>
-            <div className=' px-3 md:px-6 -rotate-12 text-xs md:text-base font-bold py-1 border-2 md:border-4 border-black'>تمام شد</div>
+          <div className='flex-center my-auto'>
+            <div className='px-3 md:px-6 -rotate-12 text-xs md:text-base font-bold py-1 border-2 md:border-4 border-black'>تمام شد</div>
           </div>
 
         )}
