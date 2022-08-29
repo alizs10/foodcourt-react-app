@@ -1,42 +1,60 @@
 export const data = [
     {
         id: "1",
-        name: "پیتزا ها",
+        name: "پیتزا",
         img: "./assets/cats/pizza-1.png",
         foods: [
             {
-                id: "1",
-                name: "پیتزا آمریکایی",
+                id: "5",
+                name: "پیتزا پپرونی",
                 price: "220000",
-                ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-1.webp",
+                ingredients: "سس گوجه ، پپرونی ، پنیر موزارلا",
+                img: "./assets/pizza/pizza-5.webp",
                 isAvailable: false,
                 catId: "1"
             },
             {
-                id: "2",
-                name: "پیتزا ایتالیایی",
+                id: "6",
+                name: "پیتزا شیکاگو",
                 price: "240000",
-                ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-2.webp",
+                ingredients: "سس گوجه ، سوسیس ، قارچ ، پنیر پارمزان",
+                img: "./assets/pizza/pizza-6.webp",
                 isAvailable: true,
                 catId: "1"
             },
             {
-                id: "3",
-                name: "پیتزا",
+                id: "7",
+                name: "پیتزا کالیفرنیا",
                 price: "200000",
-                ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-3.webp",
+                ingredients: "میگو ، آناناس ، مارچوبه ، پنیر فتا",
+                img: "./assets/pizza/pizza-7.webp",
                 isAvailable: true,
                 catId: "1"
             },
             {
-                id: "4",
-                name: "پیتزا",
+                id: "8",
+                name: "پیتزا مارگاریتا",
                 price: "120000",
-                ingredients: "نان، پنیر پیتزا",
-                img: "./assets/pizza/pizza-4.webp",
+                ingredients: "سس گوجه ، گوجه گیلاسی ، پنیر موزارلا ، ریحان",
+                img: "./assets/pizza/pizza-8.webp",
+                isAvailable: true,
+                catId: "1"
+            },
+            {
+                id: "9",
+                name: "پیتزا استیک",
+                price: "120000",
+                ingredients: "استیک گوشت ، قارچ  ، سیر ، زیتون ، سس گوجه و سس خردل ، پنیر موزارلا",
+                img: "./assets/pizza/pizza-9.webp",
+                isAvailable: true,
+                catId: "1"
+            },
+            {
+                id: "10",
+                name: "پیتزا کاپریچوزا",
+                price: "120000",
+                ingredients: "بیکن ، سوسیس سالامی ،  قارچ ، زیتون ، کنگر فرنگی ، پنیر موزارلا",
+                img: "./assets/pizza/pizza-10.webp",
                 isAvailable: true,
                 catId: "1"
             },
@@ -44,42 +62,42 @@ export const data = [
     },
     {
         id: "2",
-        name: "سوپ ها",
+        name: "سوپ",
         img: "./assets/cats/soup-1.png",
         foods: [
             {
-                id: "1",
-                name: "سوپ خامه",
+                id: "5",
+                name: "سوپ پیاز فرانسوی",
                 price: "48000",
-                ingredients: "پیاز، آب مرغ، خامه، رب گوجه",
-                img: "./assets/soup/soup-1.webp",
+                ingredients: "",
+                img: "./assets/soup/soup-5.webp",
                 isAvailable: true,
                 catId: "2"
             },
             {
-                id: "2",
-                name: "سوپ بروکلی",
-                price: "35000",
-                ingredients: "پیاز، آب مرغ، بروکلی",
-                img: "./assets/soup/soup-2.webp",
-                isAvailable: true,
-                catId: "2"
-            },
-            {
-                id: "3",
-                name: "سوپ پیاز",
-                price: "35000",
-                ingredients: "پیاز، آب مرغ",
-                img: "./assets/soup/soup-3.webp",
-                isAvailable: true,
-                catId: "2"
-            },
-            {
-                id: "4",
+                id: "6",
                 name: "سوپ شیر",
+                price: "35000",
+                ingredients: "",
+                img: "./assets/soup/soup-6.webp",
+                isAvailable: true,
+                catId: "2"
+            },
+            {
+                id: "7",
+                name: "سوپ جو",
+                price: "35000",
+                ingredients: "",
+                img: "./assets/soup/soup-7.webp",
+                isAvailable: true,
+                catId: "2"
+            },
+            {
+                id: "8",
+                name: "سوپ ذرت",
                 price: "62000",
-                ingredients: "پیاز، آب مرغ، شیر رب گوجه",
-                img: "./assets/soup/soup-4.webp",
+                ingredients: "",
+                img: "./assets/soup/soup-8.webp",
                 isAvailable: true,
                 catId: "2"
             },
@@ -87,33 +105,33 @@ export const data = [
     },
     {
         id: "3",
-        name: "برگر ها",
+        name: "برگر",
         img: "./assets/cats/burger-1.png",
         foods: [
             {
-                id: "1",
-                name: "برگر",
+                id: "4",
+                name: "چیلی برگر",
                 price: "78000",
-                ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
-                img: "./assets/burger/burger-1.webp",
+                ingredients: "گوشت گوساله ، فیله سوخاری مرغ ، پنیر گودا ، سس چیلی",
+                img: "./assets/burger/burger-4.webp",
                 isAvailable: true,
                 catId: "3"
             },
             {
-                id: "2",
-                name: "برگر",
+                id: "5",
+                name: "ماشروم برگر",
                 price: "99000",
-                ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
-                img: "./assets/burger/burger-2.webp",
+                ingredients: " گوشت گوساله ، حلقه های سوخاری پیاز ، قارچ ، پنیر گودا",
+                img: "./assets/burger/burger-5.webp",
                 isAvailable: true,
                 catId: "3"
             },
             {
-                id: "3",
-                name: "برگر",
+                id: "6",
+                name: "دابل چیز برگر",
                 price: "110000",
-                ingredients: "نان برگر، گوشت ۲۵۰ گرم، گوجه، پیاز",
-                img: "./assets/burger/burger-3.webp",
+                ingredients: "گوشت گوساله ، پنیر چدار ، پیاز حلقه ای",
+                img: "./assets/burger/burger-6.webp",
                 isAvailable: true,
                 catId: "3"
             },
@@ -121,7 +139,7 @@ export const data = [
     },
     {
         id: "4",
-        name: "پاستا ها",
+        name: "پاستا",
         img: "./assets/cats/pasta-1.png",
         foods: [
             {
@@ -155,67 +173,101 @@ export const data = [
     },
     {
         id: "5",
-        name: "ساندویچ ها",
+        name: "ساندویچ",
         img: "./assets/cats/sandwich-1.png",
         foods: [
             {
-                id: "1",
-                name: "ساندویچ",
+                id: "4",
+                name: "ساندویچ پنینی گوشت",
                 price: "120000",
-                ingredients: "نان باگت، کالباس، گوجه، خیارشور",
-                img: "./assets/sandwich/sandwich-1.webp",
+                ingredients: "گوشت چرخ کرده ، قارچ ، فلفل دلمه ای ، سیر ، پنیر ورقه ای گودا",
+                img: "./assets/sandwich/sandwich-4.webp",
                 isAvailable: true,
                 catId: "5"
             },
             {
-                id: "2",
-                name: "ساندویچ",
+                id: "5",
+                name: "ساندویچ پنینی مرغ و قارچ",
                 price: "145000",
-                ingredients: "نان باگت، کالباس، گوجه، خیارشور",
-                img: "./assets/sandwich/sandwich-2.webp",
+                ingredients: "فیله مرغ ، قارچ ، کاهو ، پنیر ورقه ای چدار",
+                img: "./assets/sandwich/sandwich-5.webp",
                 isAvailable: true,
                 catId: "5"
             },
             {
-                id: "3",
-                name: "ساندویچ",
+                id: "6",
+                name: "ساندویچ پنینی مرغ و اسفناج",
                 price: "132000",
-                ingredients: "نان باگت، کالباس، گوجه، خیارشور",
-                img: "./assets/sandwich/sandwich-3.webp",
+                ingredients: "فیله مرغ ، اسفناج ، قارچ ، پیاز ، گردو ، پنیر ورقه ای موزارلا",
+                img: "./assets/sandwich/sandwich-6.webp",
                 isAvailable: true,
                 catId: "5"
             },
         ]
     },
     {
-        id: "6",
-        name: "سالاد ها",
-        img: "./assets/cats/salad-1.png",
+        id: "10",
+        name: "سوخاری",
+        img: "./assets/cats/fry-1.png",
         foods: [
             {
                 id: "1",
-                name: "سالاد",
+                name: "وایت فرایز",
                 price: "32000",
-                ingredients: "کاهو، کوجه",
-                img: "./assets/salad/salad-1.webp",
+                ingredients: "",
+                img: "./assets/fry/fry-1.webp",
                 isAvailable: true,
-                catId: "6"
+                catId: "10"
             },
             {
                 id: "2",
-                name: "سالاد",
+                name: "دیپ فرایز",
                 price: "45000",
-                ingredients: "کاهو، کوجه",
-                img: "./assets/salad/salad-2.webp",
+                ingredients: "",
+                img: "./assets/fry/fry-2.webp",
+                isAvailable: true,
+                catId: "10"
+            },
+            {
+                id: "3",
+                name: "سیب زمینی سوخاری",
+                price: "48000",
+                ingredients: "",
+                img: "./assets/fry/fry-3.webp",
+                isAvailable: true,
+                catId: "10"
+            },
+        ]
+    },
+    {
+        id: "6",
+        name: "سالاد",
+        img: "./assets/cats/salad-1.png",
+        foods: [
+            {
+                id: "4",
+                name: "سالاد سزار سوخاری",
+                price: "32000",
+                ingredients: "فیله سوخاری ، کاهو ، سس خردل ، زیتون ، نان تست ، پنیر پارمزان",
+                img: "./assets/salad/salad-4.webp",
                 isAvailable: true,
                 catId: "6"
             },
             {
-                id: "3",
-                name: "سالاد",
+                id: "5",
+                name: "سالاد یونانی",
+                price: "45000",
+                ingredients: "پیاز قرمز ، زیتون سیاه ، خیار ، گوجه گیلاسی ، فلفل دلمه ای ، پنیر فتا",
+                img: "./assets/salad/salad-5.webp",
+                isAvailable: true,
+                catId: "6"
+            },
+            {
+                id: "6",
+                name: "سالاد اندونزی",
                 price: "48000",
-                ingredients: "کاهو، کوجه",
-                img: "./assets/salad/salad-3.webp",
+                ingredients: "کلم قرمز ، کلم سفید ، ذرت ، هویج ، خیارشور ، ژامبون ، سس مایونز",
+                img: "./assets/salad/salad-6.webp",
                 isAvailable: true,
                 catId: "6"
             },
@@ -223,14 +275,14 @@ export const data = [
     },
     {
         id: "7",
-        name: "نوشیدنی ها",
+        name: "نوشیدنی",
         img: "./assets/cats/drink-1.png",
         foods: [
             {
                 id: "1",
                 name: "کوکاکولا",
                 price: "22000",
-                ingredients: "کوکاکولا مشکی",
+                ingredients: "",
                 img: "./assets/drinks/drink-1.webp",
                 isAvailable: true,
                 catId: "7"
@@ -239,26 +291,35 @@ export const data = [
                 id: "2",
                 name: "لیموناد",
                 price: "32000",
-                ingredients: "آب گازدار، لیمو، برگ لیمو",
+                ingredients: "",
                 img: "./assets/drinks/drink-2.webp",
                 isAvailable: true,
                 catId: "7"
             },
             {
-                id: "3",
+                id: "6",
                 name: "پپسی",
                 price: "20000",
-                ingredients: "پپسی",
-                img: "./assets/drinks/drink-3.webp",
+                ingredients: "",
+                img: "./assets/drinks/drink-6.webp",
                 isAvailable: true,
                 catId: "7"
             },
             {
-                id: "4",
-                name: "آب انار",
+                id: "7",
+                name: "فانتا",
                 price: "40000",
-                ingredients: "آب، یخ، آب انار، لیموی تازه",
-                img: "./assets/drinks/drink-4.webp",
+                ingredients: "",
+                img: "./assets/drinks/drink-7.webp",
+                isAvailable: true,
+                catId: "7"
+            },
+            {
+                id: "8",
+                name: "Sprite",
+                price: "40000",
+                ingredients: "",
+                img: "./assets/drinks/drink-8.webp",
                 isAvailable: true,
                 catId: "7"
             },
@@ -266,33 +327,42 @@ export const data = [
     },
     {
         id: "8",
-        name: "دسر ها",
+        name: "دسر",
         img: "./assets/cats/dessert-1.png",
         foods: [
             {
-                id: "1",
-                name: "کیک شکلاتی",
+                id: "4",
+                name: "کیک باتنبرگ",
                 price: "45000",
-                ingredients: "شکلات، گردو",
-                img: "./assets/dessert/dessert-1.webp",
+                ingredients: "",
+                img: "./assets/dessert/dessert-4.webp",
                 isAvailable: true,
                 catId: "8"
             },
             {
-                id: "2",
-                name: "کیک شکلاتی",
+                id: "5",
+                name: "کیک شکلاتی اورئو",
                 price: "40000",
-                ingredients: "شکلات، گردو",
-                img: "./assets/dessert/dessert-2.webp",
+                ingredients: "",
+                img: "./assets/dessert/dessert-5.webp",
                 isAvailable: true,
                 catId: "8"
             },
             {
-                id: "3",
-                name: "کیک شکلاتی",
+                id: "6",
+                name: "کیک ردولوت",
                 price: "55000",
-                ingredients: "شکلات، گردو",
-                img: "./assets/dessert/dessert-3.webp",
+                ingredients: "",
+                img: "./assets/dessert/dessert-6.webp",
+                isAvailable: true,
+                catId: "8"
+            },
+            {
+                id: "7",
+                name: "کیک هویج",
+                price: "55000",
+                ingredients: "",
+                img: "./assets/dessert/dessert-7.webp",
                 isAvailable: true,
                 catId: "8"
             },
@@ -300,33 +370,42 @@ export const data = [
     },
     {
         id: "9",
-        name: "نوشیدنی گرم",
+        name: "چای و قهوه",
         img: "./assets/cats/coffee-1.png",
         foods: [
             {
-                id: "1",
-                name: "اسپرسو",
+                id: "4",
+                name: "چای",
                 price: "48000",
-                ingredients: "قهوه، شکلات تلخ",
-                img: "./assets/coffee/coffee-1.webp",
+                ingredients: "",
+                img: "./assets/coffee/coffee-4.webp",
                 isAvailable: false,
                 catId: "9"
             },
             {
-                id: "2",
-                name: "شکلات داغ",
+                id: "5",
+                name: "کاپوچینو",
                 price: "38000",
-                ingredients: "آب جوش، شکلات تلخ",
-                img: "./assets/coffee/coffee-2.webp",
+                ingredients: "",
+                img: "./assets/coffee/coffee-5.webp",
                 isAvailable: true,
                 catId: "9"
             },
             {
-                id: "3",
-                name: "چای",
+                id: "6",
+                name: "آیس لته",
                 price: "28000",
-                ingredients: "چای معطر",
-                img: "./assets/coffee/coffee-3.webp",
+                ingredients: "",
+                img: "./assets/coffee/coffee-6.webp",
+                isAvailable: true,
+                catId: "9"
+            },
+            {
+                id: "7",
+                name: "موکا",
+                price: "28000",
+                ingredients: "",
+                img: "./assets/coffee/coffee-7.webp",
                 isAvailable: true,
                 catId: "9"
             },

@@ -102,7 +102,10 @@ function FoodWindow({ food, toggle }) {
 
           <span className="w-1/5 h-1 bg-black/40 rounded-full self-center"></span>
           <span className="font-bold text-xl">{food.name}</span>
+          {food.ingredients && (
           <span className="text-base">محتویات: {food.ingredients}</span>
+        )}
+          
           {food.isAvailable ? (
 
             <>

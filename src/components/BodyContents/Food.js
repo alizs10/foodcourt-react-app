@@ -56,7 +56,9 @@ function Food({ food, catId }) {
       </div>
       <div className='w-[calc(100%_-_29vw)] md:w-[calc(100%_-_16vw)] flex flex-col gap-y-2'>
         <span className='text-xs md:text-sm lg:text-lg font-bold'>{food.name}</span>
-        <span className='text-[14px] md:text-xs lg:text-sm'>محتویات: {food.ingredients}</span>
+        {food.ingredients && (
+          <span className='text-[14px] md:text-xs lg:text-sm'>محتویات: {food.ingredients}</span>
+        )}
         {food.isAvailable ? (
 
           <>
